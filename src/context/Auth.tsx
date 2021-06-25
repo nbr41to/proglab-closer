@@ -11,7 +11,6 @@ const AuthContext = createContext<AuthContextProps>({ currentUser: null });
 const AuthProvider: VFC<{ children: ReactNode }> = ({ children }) => {
   const [currentUser, setCurrentUser] = useState<firebase.User | null>(null);
   const router = useRouter();
-  console.log(currentUser);
 
   useEffect(() => {
     const unscribe = firebase.auth().onAuthStateChanged((user) => {

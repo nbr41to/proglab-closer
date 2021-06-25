@@ -1,17 +1,12 @@
 import { Box } from '@fower/react';
 import Router from 'next/router';
-import { useEffect } from 'react';
 import { googleLogin } from '../src/firebase/auth';
-import { auth } from '../src/firebase/config';
 
 export default function Home() {
-  useEffect(() => {
-    const user = auth.currentUser;
-    console.log(user);
-  }, []);
   const login = () => {
     googleLogin().then((id) => Router.push(`/mypage/${id}`));
   };
+
   return (
     <Box toCenter column h='100vh' bgOrange300>
       <Box borderOrange400 bgWhite rounded={12} p={32} toCenter column>
