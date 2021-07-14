@@ -1,7 +1,6 @@
 import { useEffect, useState, VFC } from 'react';
 import { Box } from '@fower/react';
 import { db } from 'src/firebase/config';
-import { firebase } from 'src/firebase/config';
 import { ContentType, Room } from 'src/types';
 import { Button } from '../../src/components/Button';
 import Router from 'next/router';
@@ -10,12 +9,9 @@ import { ContentCard } from 'src/components/ContentCard';
 import { PostForm } from 'src/components/PostForm';
 import { updateTitle } from 'src/firebase/firestore';
 import { Roulette } from 'src/components/Roulette';
+import { achieveRoom } from '../../src/firebase/firestore';
 
-type RoomPageProps = {
-  params: { id: string };
-};
-
-const RoomPage: VFC<RoomPageProps> = () => {
+const RoomPage: VFC = () => {
   const [visiblePostForm, setVisiblePostForm] = useState(false);
   const [visibleRoulette, setVisibleRoulette] = useState(false);
   const [rouletteContent, setRouletteContent] = useState([]);
@@ -31,7 +27,6 @@ const RoomPage: VFC<RoomPageProps> = () => {
       .onSnapshot((doc) => {
         const result = doc.data() as Room;
         setRoomInfo(result);
-        console.log(result);
       });
     return () => {
       unsubscribe();
@@ -42,7 +37,6 @@ const RoomPage: VFC<RoomPageProps> = () => {
     const roomId = Router.query.id as string;
     if (!(e.key == 'Enter' && (e.metaKey == true || e.ctrlKey == true))) return;
     const title = e.target.innerText;
-    console.log(title);
     updateTitle(roomId, title);
   };
 
@@ -52,7 +46,11 @@ const RoomPage: VFC<RoomPageProps> = () => {
     setVisibleRoulette(true);
   };
 
-  console.log(roomInfo);
+  const achieve = () => {
+    achieveRoom(roomInfo);
+    Router.push('/entrance');
+  };
+
   return (
     <Box>
       <PostForm
@@ -86,7 +84,7 @@ const RoomPage: VFC<RoomPageProps> = () => {
         />
       </Box>
       <Box>
-        <Box flex my={20}>
+        <Box flex toCenterY my={20}>
           <h2>今週を振り返る</h2>
           <Button
             label=''
@@ -99,12 +97,12 @@ const RoomPage: VFC<RoomPageProps> = () => {
         </Box>
         <Box border={2} minH={200} rounded={8} flex p={12}>
           {roomInfo?.content?.chat?.map((content, index) => (
-            <ContentCard key={index} text={content.text} name={content.name} />
+            <ContentCard key={index} content={content} />
           ))}
         </Box>
       </Box>
       <Box>
-        <Box flex my={20}>
+        <Box flex toCenterY my={20}>
           <h2>今週に学んだこと</h2>
           <Button
             label=''
@@ -117,12 +115,12 @@ const RoomPage: VFC<RoomPageProps> = () => {
         </Box>
         <Box border={2} minH={200} rounded={8} flex p={12}>
           {roomInfo?.content?.report?.map((content, index) => (
-            <ContentCard key={index} text={content.text} name={content.name} />
+            <ContentCard key={index} content={content} />
           ))}
         </Box>
       </Box>
       <Box>
-        <Box flex my={20}>
+        <Box flex toCenterY my={20}>
           <h2>次週の取り組み</h2>
           <Button
             label=''
@@ -135,11 +133,11 @@ const RoomPage: VFC<RoomPageProps> = () => {
         </Box>
         <Box border={2} minH={200} rounded={8} flex p={12}>
           {roomInfo?.content?.next?.map((content, index) => (
-            <ContentCard key={index} text={content.text} name={content.name} />
+            <ContentCard key={index} content={content} />
           ))}
         </Box>
       </Box>
-      <Button label='finish room' onClick={() => {}} />
+      <Button label='achieve room' mt={16} onClick={achieve} />
     </Box>
   );
 };

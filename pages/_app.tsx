@@ -4,8 +4,8 @@ import { RecoilRoot } from 'recoil';
 import { Layout } from '../src/components/Layout';
 function MyApp({ Component, pageProps }) {
   return (
-    <AuthProvider>
-      <RecoilRoot>
+    <RecoilRoot>
+      <AuthProvider>
         {process.browser && location.pathname === '/' ? (
           <Component {...pageProps} />
         ) : (
@@ -13,8 +13,8 @@ function MyApp({ Component, pageProps }) {
             <Component {...pageProps} />
           </Layout>
         )}
-      </RecoilRoot>
-    </AuthProvider>
+      </AuthProvider>
+    </RecoilRoot>
   );
 }
 

@@ -1,8 +1,8 @@
-import { ChangeEvent, useState, VFC } from 'react';
+import { ChangeEvent, useContext, useState, VFC } from 'react';
 import { Box } from '@fower/react';
-import { useSetRecoilState } from 'recoil';
-import { userInfo } from 'src/recoil/atom';
 import { Button } from './Button';
+import { AuthContext } from 'src/context/Auth';
+import { updateUserName } from 'src/firebase/firestore';
 
 type RegistrationUserNameProps = {
   open: boolean;
@@ -14,10 +14,10 @@ export const RegistrationUserName: VFC<RegistrationUserNameProps> = ({
   close,
 }) => {
   const [name, setName] = useState('');
-  const setUser = useSetRecoilState(userInfo);
+  const { currentUser } = useContext(AuthContext);
 
   const decided = () => {
-    setUser((prev) => ({ ...prev, name }));
+    updateUserName(currentUser.uid, name);
     close();
   };
 

@@ -1,9 +1,11 @@
-import { ContentType, Content } from 'src/types';
+import { ContentType, Content, Room } from 'src/types';
 import { dateFormat } from 'src/utils/dateFormat';
 import { db, firebase } from './config';
 
-export const setUserName = () => {};
-export const updateUserName = () => {};
+export const updateUserName = (uid: string, name: string) => {
+  db.collection('users').doc(uid).update({ name });
+};
+
 export const createRoom = async () => {
   const ref = db.collection('rooms').doc();
   await ref.set({
@@ -17,6 +19,20 @@ export const createRoom = async () => {
       next: [],
     },
   });
+};
+export const joinRoom = async (roomId: string, name: string) => {
+  await db
+    .collection('rooms')
+    .doc(roomId)
+    .update({
+      member: firebase.firestore.FieldValue.arrayUnion(name),
+    });
+};
+export const achieveRoom = async (roomInfo: Room) => {
+  const roomId = roomInfo.id;
+  /* Slack API */
+  await db.collection('rooms').doc(roomId).delete();
+  await db.collection('records').doc(roomId).set(roomInfo);
 };
 
 export const updateTitle = async (roomId: string, title: string) => {

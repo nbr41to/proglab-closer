@@ -14,20 +14,18 @@ export const Roulette: VFC<RouletteProps> = ({ close, content }) => {
 
   useEffect(() => {
     if (content.length < 2) return;
-    if (count > 7) return;
+    if (count >= 8) return;
     setTimeout(() => {
       let nextDice = Math.floor(Math.random() * content.length);
       while (nextDice === dice) {
         nextDice = Math.floor(Math.random() * content.length);
       }
-      setDice(nextDice);
-      if (count === 7 && nextDice % 2 === 1) return;
       setCount((prev) => prev + 1);
-    }, 300 + count * 50);
+      if (count === 7 && nextDice % 2 === 1) return;
+      setDice(nextDice);
+    }, 300 + count * 60);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count]);
-
-  console.log(count);
 
   return (
     <Box toCenter>
@@ -55,7 +53,9 @@ export const Roulette: VFC<RouletteProps> = ({ close, content }) => {
         w={300}
         h={300}
       >
-        <ContentCard {...content[dice]} />
+        <Box bgRed700={count === 8} p={2} rounded={12}>
+          <ContentCard content={content[dice]} />
+        </Box>
       </Box>
     </Box>
   );

@@ -10,9 +10,9 @@ export default function Home() {
   };
 
   return (
-    <Box toCenter h='100vh' bgOrange300>
-      <Box maxW='360px' bgWhite rounded={12} p={32} toCenter column>
-        <Box>
+    <Box toCenter column h='100vh' bgOrange300>
+      <Box borderOrange400 bgWhite rounded={12} p={32} toCenter column>
+        <Box maxW='360px'>
           <Box as='img' src='/logo.png' w='100%' rounded={8} />
         </Box>
         <Button

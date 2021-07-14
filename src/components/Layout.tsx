@@ -11,8 +11,8 @@ type LayoutProps = {
 export const Layout: VFC<LayoutProps> = ({ children }) => {
   return (
     <Box>
-      <Box as='header' bgTeal400 w={'100vw'} px={20} py={8}>
-        <Box cursorPointer inline>
+      <Box as='header' bgTeal400 w={'100vw'} px={20} py={8} flex toCenterY>
+        <Box cursorPointer>
           <Image
             src={logo2}
             width={64}
@@ -20,6 +20,9 @@ export const Layout: VFC<LayoutProps> = ({ children }) => {
             alt='logo'
             onClick={() => Router.push('/entrance')}
           />
+        </Box>
+        <Box as='h1' white ml={28}>
+          ConfeTech
         </Box>
       </Box>
       <Box p={20}>{children}</Box>

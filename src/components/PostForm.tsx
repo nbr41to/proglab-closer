@@ -32,18 +32,22 @@ export const PostForm: VFC<PostFormProps> = ({ open, close }) => {
   const onSubmit = (e: FormEvent<HTMLDivElement>, to: ContentType) => {
     e.preventDefault();
     const roomId = Router.query.id as string;
-    const content: Content = { text: '', name: user.name };
+    const colorNum = Math.floor(Math.random() * 12);
+    const content: Content = { text: '', name: user.name, colorNum };
     if (to === 'chat') {
+      if (!chat) return alert('入力してください');
       content.text = chat;
       setChatHistory((prev) => [...prev, chat]);
       setChat('');
     }
     if (to === 'report') {
+      if (!report) return alert('入力してください');
       content.text = report;
       setReportHistory((prev) => [...prev, report]);
       setReport('');
     }
     if (to === 'next') {
+      if (!next) return alert('入力してください');
       content.text = next;
       setNextHistory((prev) => [...prev, next]);
       setNext('');
@@ -108,6 +112,7 @@ export const PostForm: VFC<PostFormProps> = ({ open, close }) => {
                 h={52}
                 toCenterY
                 text={24}
+                value={chat}
                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
                   setChat(e.target.value)
                 }
@@ -146,6 +151,7 @@ export const PostForm: VFC<PostFormProps> = ({ open, close }) => {
                 h={52}
                 toCenterY
                 text={24}
+                value={report}
                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
                   setReport(e.target.value)
                 }
@@ -184,6 +190,7 @@ export const PostForm: VFC<PostFormProps> = ({ open, close }) => {
                 h={52}
                 toCenterY
                 text={24}
+                value={next}
                 onChange={(e: ChangeEvent<HTMLInputElement>) =>
                   setNext(e.target.value)
                 }

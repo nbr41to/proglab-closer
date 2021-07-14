@@ -1,36 +1,30 @@
 import { VFC } from 'react';
 import { Box } from '@fower/react';
 import { AtomicProps } from '@fower/types';
+import { Content } from 'src/types';
+
+const colors = [
+  { bgBrand600: true },
+  { bgGray600: true },
+  { bgPink600: true },
+  { bgFuchsia600: true },
+  { bgPurple600: true },
+  { bgIndigo600: true },
+  { bgBlue600: true },
+  { bgCyan600: true },
+  { bgGreen600: true },
+  { bgLime600: true },
+  { bgYellow600: true },
+  { bgOrange600: true },
+  { bgRed600: true },
+];
 
 type ContentCardProps = Omit<AtomicProps, 'color'> & {
-  text: string;
-  name: string;
+  content: Content;
 };
 
-export const ContentCard: VFC<ContentCardProps> = ({
-  text,
-  name,
-  ...props
-}) => {
-  const randomBgColor = () => {
-    const colors = [
-      { bgBrand600: true },
-      { bgGray600: true },
-      { bgPink600: true },
-      { bgFuchsia600: true },
-      { bgPurple600: true },
-      { bgIndigo600: true },
-      { bgBlue600: true },
-      { bgCyan600: true },
-      { bgGreen600: true },
-      { bgLime600: true },
-      { bgYellow600: true },
-      { bgOrange600: true },
-      { bgRed600: true },
-    ];
-    const dice = Math.floor(Math.random() * 12);
-    return colors[dice];
-  };
+export const ContentCard: VFC<ContentCardProps> = ({ content, ...props }) => {
+  const { text, name, colorNum } = content;
 
   return (
     <Box
@@ -43,7 +37,8 @@ export const ContentCard: VFC<ContentCardProps> = ({
       h={60}
       toCenter
       rounded={8}
-      {...randomBgColor()}
+      cursorPointer
+      {...colors[colorNum]}
       {...props}
     >
       {text}
