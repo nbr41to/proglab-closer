@@ -10,10 +10,19 @@ export default function Home() {
   };
 
   return (
-    <Box toCenter column h='100vh' bgOrange300>
-      <Box borderOrange400 bgWhite rounded={12} p={32} toCenter column>
-        <Box maxW='360px'>
-          <Box as='img' src='/logo.png' w='100%' rounded={8} />
+    <Box toCenter column w='100vw' h='100vh' bgOrange300>
+      <Box
+        toCenter
+        column
+        w={360}
+        h={360}
+        borderOrange400
+        bgWhite
+        rounded={12}
+        p={32}
+      >
+        <Box>
+          <Box as='img' src='/logo.png' w={300} rounded={8} />
         </Box>
         <Button
           label='Googleログイン'
