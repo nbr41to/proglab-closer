@@ -1,4 +1,4 @@
-import { auth, firebase } from './config';
+import { auth, firebase, db } from './config';
 
 export const googleLogin = async () => {
   try {
