@@ -15,6 +15,12 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/index.jsx",
+    "src/components/Atoms/Button.tsx"
+  ],
   "exclude": ["node_modules"]
 }

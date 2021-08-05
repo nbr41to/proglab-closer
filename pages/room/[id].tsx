@@ -2,7 +2,7 @@ import { useEffect, useState, VFC } from 'react';
 import { Box } from '@fower/react';
 import { db } from 'src/firebase/config';
 import { ContentType, Room } from 'src/types';
-import { Button } from '../../src/components/Button';
+import { Button } from '../../src/components/Atoms/Button';
 import Router from 'next/router';
 import { ArrowShuffle, Send } from 'akar-icons';
 import { ContentCard } from 'src/components/ContentCard';
@@ -77,9 +77,6 @@ const RoomPage: VFC = () => {
         <Button
           label='post'
           icon={<Send />}
-          bgTeal400
-          white
-          ml={16}
           onClick={() => setVisiblePostForm(true)}
         />
       </Box>
@@ -89,9 +86,6 @@ const RoomPage: VFC = () => {
           <Button
             label=''
             icon={<ArrowShuffle />}
-            bgBlue400
-            white
-            ml={16}
             onClick={() => startRoulette('chat')}
           />
         </Box>
@@ -107,9 +101,6 @@ const RoomPage: VFC = () => {
           <Button
             label=''
             icon={<ArrowShuffle />}
-            bgBlue400
-            white
-            ml={16}
             onClick={() => startRoulette('report')}
           />
         </Box>

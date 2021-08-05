@@ -18,11 +18,11 @@ const AuthProvider: VFC<{ children: ReactNode }> = ({ children }) => {
   useEffect(() => {
     if (!process.browser) return;
     let unscribe: firebase.Unsubscribe;
-    const currentPath = location.pathname;
+    const currentPath = Router.pathname;
+
     unscribe = firebase.auth().onAuthStateChanged((user) => {
-      // ログイン状態が変化すると呼ばれる
       if (!user) {
-        Router.push('/');
+        Router.push('/login');
       } else {
         setCurrentUser(user);
         Router.push(currentPath);

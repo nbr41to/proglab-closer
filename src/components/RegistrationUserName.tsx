@@ -1,6 +1,6 @@
 import { ChangeEvent, useContext, useState, VFC } from 'react';
 import { Box } from '@fower/react';
-import { Button } from './Button';
+import { Button } from './Atoms/Button';
 import { AuthContext } from 'src/context/Auth';
 import { updateUserName } from 'src/firebase/firestore';
 

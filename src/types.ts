@@ -1,7 +1,8 @@
 export type User = {
   id: string;
   name: string;
-  role: 'master' | 'closer';
+  role: 'author' | 'closer';
+  progress?: any[];
 };
 
 export type MemberInfo = {
@@ -14,6 +15,7 @@ export type MemberInfo = {
 };
 
 export type ContentType = 'chat' | 'report' | 'next';
+
 export type Content = {
   text: string;
   name: string;

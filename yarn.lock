@@ -442,162 +442,128 @@
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.5.0.tgz#7c9a250cd272ccb94b3069bb237b5c30c3ce70f6"
   integrity sha512-5808ztHwCy0bE154pmYSR86+uKToDcoxvM7F+nMDJ2NktxujYZLsz10e7iMXrKtyePKNP5VCVgp7s0vsViSKDA==
 
-"@fower/atom@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@fower/atom/-/atom-1.27.0.tgz#2d5eee1480c0c34fbc2a3f46b389128c92042624"
-  integrity sha512-+LyqQi98zZfF3NKVRwnzVVJTClaC7CW5x7DNdZz9MRo+iuPoRPX5QTkEUv0tl9QmvJiDUWothL6A3JP3oExkLA==
+"@fower/atomic-props@^1.46.0":
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/@fower/atomic-props/-/atomic-props-1.46.0.tgz#e932e19e7c176dc97e659bb40ab79bcb01430a7e"
+  integrity sha512-KltL8EKsit3LBi3/LNJrIPDkVQ5taNjrDf5d2K2WWtTc/x35Kll8TJeQTVxPbn5UhTOt25ogrbe2xsAKfNnjNg==
   dependencies:
+    csstype "^3.0.8"
+
+"@fower/color-helper@^1.46.0":
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/@fower/color-helper/-/color-helper-1.46.0.tgz#980d150610675f42ff759ca686694c79f89fbdb1"
+  integrity sha512-WawRxyO4Ug2xdOOmGz1ZBbzSk99tm/vkwwyNK0DVlAlxn2O+FMVQGKbG3sJh5PL/2BIuoRduTUmh1z1m2PWdBA==
+
+"@fower/colors@^1.46.0":
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/@fower/colors/-/colors-1.46.0.tgz#0986aaac13c0ff39402aa64ad7b4b008184d9f1a"
+  integrity sha512-ONNHyNh2LaJlqZHj2w1Fu1mQZZzPHOOtOFrynHdskr/LaQ6B0p1BCeJ/GhKaOGf3zNrGmCcK8Lawp0RdJQ0m6w==
+
+"@fower/core@^1.46.0":
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/@fower/core/-/core-1.46.0.tgz#d0daf9575af7be159b13815588cf588abd4e534a"
+  integrity sha512-OGCAJYqY5KQBizhs82Y2b19Lc79Urx69rbvVNSwA+bPbvG9fEWY2JGpJKN7WwbjuJ655L53R5vZ9US+Na+Ajgw==
+  dependencies:
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/css-object-processor" "^1.46.0"
+    "@fower/utils" "^1.46.0"
+    deepmerge "^4.2.2"
     string-hash "^1.1.3"
 
-"@fower/color-helper@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@fower/color-helper/-/color-helper-1.27.0.tgz#6feaa1e1ad2ad5ddd82bcb1f1f65068aafc7fa86"
-  integrity sha512-ibWrLHjW3ghZ2YZMpXId0vb8bDGdq4btAEvfdNZ/+AzHJF62ynGY94zDvaYAOOgGsD+vofZ/q7uMvJ8sj5+DmA==
-
-"@fower/colors@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@fower/colors/-/colors-1.27.0.tgz#d2b2ec4ebdea4a860247bcda3ec24a9fd7d3f2ae"
-  integrity sha512-OhaZGFW/B/qY0+1PwrQFGId9xFzUrDtv981iEH8rp4neIXSPZOOoQtWIJDLha+nlcdpxP19cuvcpmXYNcDwY6A==
+"@fower/css-object-processor@^1.46.0":
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/@fower/css-object-processor/-/css-object-processor-1.46.0.tgz#9ec9cfd3ebd7a550564557feb7db13cd0f805171"
+  integrity sha512-JWUL5h13Yn9rgCwncJnNXjQHgz7ClG4gX117Haq9l3VRSk0+yvFqyAMutce2GxSJRXLs29x+MQD8i0Ln12DTkA==
   dependencies:
-    "@fower/types" "^1.27.0"
-
-"@fower/core@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@fower/core/-/core-1.27.0.tgz#e6a43dcfc12c4729e7d25e43e9a4fa05f8f6b031"
-  integrity sha512-ZU6EC1B/Duo2QnaX/My03/v1P4E3I3mguen0ahDFY4XX6Qev0gmzV4uDBL6FT8Y4I7pdp/jRxGPnEC7/Fq7Muw==
-  dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/css-object-processor" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/sheet" "^1.27.0"
-    "@fower/store" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
-
-"@fower/css-object-processor@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@fower/css-object-processor/-/css-object-processor-1.27.0.tgz#72babff5226c9ecdab799192bb98ee0ac824f4d5"
-  integrity sha512-G70MFI3OM6s+NRnGYAu/PwmQTE2yhMWDUDOGWACEo8cCPH671M2llt+Qgz3897wDKlmkxUkP4JEVvYdqg0jdsw==
-  dependencies:
-    "@fower/utils" "^1.27.0"
+    "@fower/utils" "^1.46.0"
     csstype "^3.0.8"
 
-"@fower/parser@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@fower/parser/-/parser-1.27.0.tgz#a08b77e4b94bb84f960922f09033dd66a6065724"
-  integrity sha512-iMg/XkVtUs6/YHExWOZcKFHto0AnepXcOeAX9EKswxwsK6GRnuCEobNWudJjEXt2QxoNVcY7L6rLF3XEd0u9kw==
+"@fower/preset-web@^1.46.0":
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/@fower/preset-web/-/preset-web-1.46.0.tgz#513ef3fbe16df39c50cc8d9fd335d03065895aac"
+  integrity sha512-bZ5duZUVLXGRtiNOUo8lppE2T7WlX5TSYKBnfxmqk4b4CSlG7L9fWVP4DGAaCjhPeOFimMHKzh3nSywm4qesgg==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/css-object-processor" "^1.27.0"
-    "@fower/sheet" "^1.27.0"
-    "@fower/store" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/colors" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    fower-plugin-animation "^1.46.0"
+    fower-plugin-appearance "^1.46.0"
+    fower-plugin-background "^1.46.0"
+    fower-plugin-border "^1.46.0"
+    fower-plugin-box-alignment "^1.46.0"
+    fower-plugin-box-sizing "^1.46.0"
+    fower-plugin-color "^1.46.0"
+    fower-plugin-container "^1.46.0"
+    fower-plugin-cursor "^1.46.0"
+    fower-plugin-debug "^1.46.0"
+    fower-plugin-display "^1.46.0"
+    fower-plugin-ellipsis "^1.46.0"
+    fower-plugin-flexbox "^1.46.0"
+    fower-plugin-font-family "^1.46.0"
+    fower-plugin-font-style "^1.46.0"
+    fower-plugin-font-weight "^1.46.0"
+    fower-plugin-gradient "^1.46.0"
+    fower-plugin-grid "^1.46.0"
+    fower-plugin-layout "^1.46.0"
+    fower-plugin-line-height "^1.46.0"
+    fower-plugin-list "^1.46.0"
+    fower-plugin-margin "^1.46.0"
+    fower-plugin-opacity "^1.46.0"
+    fower-plugin-outline "^1.46.0"
+    fower-plugin-overflow "^1.46.0"
+    fower-plugin-padding "^1.46.0"
+    fower-plugin-placeholder "^1.46.0"
+    fower-plugin-position "^1.46.0"
+    fower-plugin-ring "^1.46.0"
+    fower-plugin-rounded "^1.46.0"
+    fower-plugin-shadow "^1.46.0"
+    fower-plugin-size "^1.46.0"
+    fower-plugin-space "^1.46.0"
+    fower-plugin-svg "^1.46.0"
+    fower-plugin-text-align "^1.46.0"
+    fower-plugin-text-decoration "^1.46.0"
+    fower-plugin-text-overflow "^1.46.0"
+    fower-plugin-text-size "^1.46.0"
+    fower-plugin-text-transform "^1.46.0"
+    fower-plugin-transform "^1.46.0"
+    fower-plugin-transition "^1.46.0"
+    fower-plugin-user-select "^1.46.0"
+    fower-plugin-visibility "^1.46.0"
+    fower-plugin-z-index "^1.46.0"
 
-"@fower/preset-web@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@fower/preset-web/-/preset-web-1.27.0.tgz#9caf40ce40792825f0842c671ec797e4239f418a"
-  integrity sha512-xYI2RQTUG4SVC0nHSEuisDzNPcGFZEUQD7/13YXYO4VQei0iKGFouyEUZUoHS2cgk/zMWQpEMbfasevLyUm3hQ==
+"@fower/react@^1.46.0":
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/@fower/react/-/react-1.46.0.tgz#254d28bbcfaaa84a27f760148044ae77b184794e"
+  integrity sha512-7daQ/KZIY0vtGlMekqkQHw7LLOK1BwyuNddPFa9MFSY4OoC+3nPzR4CPKPPscYELr2jgT3+nHd7ra5r1Hk+QGQ==
   dependencies:
-    "@fower/colors" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    fower-plugin-appearance "^1.27.0"
-    fower-plugin-background "^1.27.0"
-    fower-plugin-border "^1.27.0"
-    fower-plugin-box-alignment "^1.27.0"
-    fower-plugin-box-sizing "^1.27.0"
-    fower-plugin-color "^1.27.0"
-    fower-plugin-cursor "^1.27.0"
-    fower-plugin-debug "^1.27.0"
-    fower-plugin-display "^1.27.0"
-    fower-plugin-ellipsis "^1.27.0"
-    fower-plugin-flexbox "^1.27.0"
-    fower-plugin-font-family "^1.27.0"
-    fower-plugin-font-style "^1.27.0"
-    fower-plugin-font-weight "^1.27.0"
-    fower-plugin-gradient "^1.27.0"
-    fower-plugin-grid "^1.27.0"
-    fower-plugin-layout "^1.27.0"
-    fower-plugin-line-height "^1.27.0"
-    fower-plugin-list "^1.27.0"
-    fower-plugin-margin "^1.27.0"
-    fower-plugin-opacity "^1.27.0"
-    fower-plugin-outline "^1.27.0"
-    fower-plugin-overflow "^1.27.0"
-    fower-plugin-padding "^1.27.0"
-    fower-plugin-placeholder "^1.27.0"
-    fower-plugin-position "^1.27.0"
-    fower-plugin-ring "^1.27.0"
-    fower-plugin-rounded "^1.27.0"
-    fower-plugin-shadow "^1.27.0"
-    fower-plugin-size "^1.27.0"
-    fower-plugin-space "^1.27.0"
-    fower-plugin-svg "^1.27.0"
-    fower-plugin-text-align "^1.27.0"
-    fower-plugin-text-decoration "^1.27.0"
-    fower-plugin-text-overflow "^1.27.0"
-    fower-plugin-text-size "^1.27.0"
-    fower-plugin-text-transform "^1.27.0"
-    fower-plugin-transform "^1.27.0"
-    fower-plugin-transition "^1.27.0"
-    fower-plugin-user-select "^1.27.0"
-    fower-plugin-visibility "^1.27.0"
-    fower-plugin-z-index "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/css-object-processor" "^1.46.0"
+    "@fower/preset-web" "^1.46.0"
+    "@fower/styled" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-"@fower/react@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@fower/react/-/react-1.27.0.tgz#4ccf6747f082446ade29f4afe6641ec4fd588f45"
-  integrity sha512-gk42+4VyLCaNB/j7DZfPd6JYu1SH6Cc83mJRgxUvUlXN2XY305LfySo0milISjT8TiH7jnNmNHeSpMxk0mwALA==
+"@fower/styled@^1.46.0":
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/@fower/styled/-/styled-1.46.0.tgz#2caceb096c445b9cbe9c35a432eb13d37081e4cc"
+  integrity sha512-DnCE8Jn9fNghwQWsmOaeMMvblnwd2cTGpsMXv0ASmpn2va0lwSZvumVLg6j+1o9e+zt0JgbCwNF+vOtumAnZIA==
   dependencies:
-    "@fower/core" "^1.27.0"
-    "@fower/css-object-processor" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/preset-web" "^1.27.0"
-    "@fower/sheet" "^1.27.0"
-    "@fower/store" "^1.27.0"
-    "@fower/styled" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
-
-"@fower/sheet@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@fower/sheet/-/sheet-1.27.0.tgz#6cc03653e492a4f3fe34aae7a741dd3ea92b29f9"
-  integrity sha512-PIqSrMKk9tMnfrn8kDAzneX5XAiK3WDv0kqUSso21zd3fFPTsU/z2hjuhYDplgA1YyU4cPIeVXxcURtDWSzPQg==
-  dependencies:
-    "@fower/utils" "^1.27.0"
-
-"@fower/store@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@fower/store/-/store-1.27.0.tgz#9e16ec9688b4c9ff3c395169478e7c28a3ed7baa"
-  integrity sha512-gnlTMypUvUT+3vBrgQae1iSVg+d2WErGUqXwJbsOelMS+QnfRe3rkM2C5Js32YA7yGag1pqOBtGv+uLY3VD1AA==
-  dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    deepmerge "^4.2.2"
-
-"@fower/styled@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@fower/styled/-/styled-1.27.0.tgz#2a24b603ca9daa913b1540f7b99fb13fc5fee9ac"
-  integrity sha512-wAzrrcj07l9owN8LtAQag9njVCKT0d6NPhyh7h1JIgfjjcsX9s9BsY6QpYepCwpawDUxlab3RXbSzOzNlX1RTA==
-  dependencies:
-    "@fower/core" "^1.27.0"
-    "@fower/store" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
     hoist-non-react-statics "^3.3.2"
 
-"@fower/types@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@fower/types/-/types-1.27.0.tgz#32b7ae9bb5aae128b2adf87416a8c971835c7e86"
-  integrity sha512-aGTYIhdCFPQDiyoP9ITPYkRoB7txTcpwcMMV3gcZ8DYr2qUitChJMgXA+jea3x2RpBz8Gn3RfslLsEKLvwypaQ==
+"@fower/types@^1.36.0":
+  version "1.36.0"
+  resolved "https://registry.yarnpkg.com/@fower/types/-/types-1.36.0.tgz#e0ba3ef6b91bed5515e5ccc66f794590ad15c0db"
+  integrity sha512-9pNN3MmaJzkq6l4IIlvcdO2JVZDmlbol27HOPictYRPdwBm7jsHcMetfBo5aGeVLbIM0ddZkDBfBEkjW4l6QiA==
   dependencies:
-    "@fower/atom" "^1.27.0"
     csstype "^3.0.8"
 
-"@fower/utils@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@fower/utils/-/utils-1.27.0.tgz#e945155640e4425d9e4e8d844452d767c05a6db7"
-  integrity sha512-YFtLLnt0mzoYn4y6GLtdEYog+sjaiDkt1z6+UZ3m3zT6dV97pDmtVw2yS4E4gRi50Wji5RAvjtLyOIBNOKXsCw==
+"@fower/utils@^1.46.0":
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/@fower/utils/-/utils-1.46.0.tgz#c54a810cec1e2d6412919033473397eafabf4fb5"
+  integrity sha512-ffbOleK0M4LjoCn2fYsnCxv7RPZo2PMs6zNkoDx0tE6q0kTbp+DjzmspC6HeQgwKKoACUJ5NdCmQDVnmKAeUeQ==
   dependencies:
     "@types/string-hash" "^1.1.1"
     string-hash "^1.1.3"
@@ -848,6 +814,14 @@
     "@styled-system/core" "^5.1.2"
     "@styled-system/css" "^5.1.5"
 
+"@types/hoist-non-react-statics@*":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz#1124aafe5118cb591977aeb1ceaaed1070eb039f"
+  integrity sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==
+  dependencies:
+    "@types/react" "*"
+    hoist-non-react-statics "^3.3.0"
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
@@ -868,6 +842,15 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
   integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
 
+"@types/react@*":
+  version "17.0.14"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.14.tgz#f0629761ca02945c4e8fea99b8177f4c5c61fb0f"
+  integrity sha512-0WwKHUbWuQWOce61UexYuWTGuGY/8JvtUe/dtQ6lR4sZ3UiylHotJeWpf3ArP9+DSGUoLY3wbU59VyMrJps5VQ==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
 "@types/react@^17.0.11":
   version "17.0.11"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.11.tgz#67fcd0ddbf5a0b083a0f94e926c7d63f3b836451"
@@ -886,6 +869,15 @@
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/string-hash/-/string-hash-1.1.1.tgz#4c336e61d1e13ce2d3efaaa5910005fd080e106b"
   integrity sha512-ijt3zdHi2DmZxQpQTmozXszzDo78V4R3EdvX0jFMfnMH2ZzQSmCbaWOMPGXFUYSzSIdStv78HDjg32m5dxc+tA==
+
+"@types/styled-components@^5.1.11":
+  version "5.1.11"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.11.tgz#a3a1bc0f2cdad7318d8ce219ee507e6b353503b5"
+  integrity sha512-u8g3bSw9KUiZY+S++gh+LlURGraqBe3MC5I5dygrNjGDHWWQfsmZZRTJ9K9oHU2CqWtxChWmJkDI/gp+TZPQMw==
+  dependencies:
+    "@types/hoist-non-react-statics" "*"
+    "@types/react" "*"
+    csstype "^3.0.2"
 
 "@typescript-eslint/parser@^4.20.0":
   version "4.28.0"
@@ -1122,7 +1114,7 @@ axobject-query@^2.2.0:
   resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-2.2.0.tgz#943d47e10c0b704aa42275e20edf3722648989be"
   integrity sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA==
 
-"babel-plugin-styled-components@>= 1.12.0":
+"babel-plugin-styled-components@>= 1.12.0", babel-plugin-styled-components@^1.13.2:
   version "1.13.2"
   resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.13.2.tgz#ebe0e6deff51d7f93fceda1819e9b96aeb88278d"
   integrity sha512-Vb1R3d4g+MUfPQPVDMCGjm3cDocJEUTR7Xq7QS95JWWeksN1wdFRYpD2kulDgI3Huuaf1CZd+NK4KQmqUFh5dA==
@@ -2108,447 +2100,411 @@ foreach@^2.0.5:
   resolved "https://registry.yarnpkg.com/foreach/-/foreach-2.0.5.tgz#0bee005018aeb260d0a3af3ae658dd0136ec1b99"
   integrity sha1-C+4AUBiusmDQo6865ljdATbsG5k=
 
-fower-plugin-appearance@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-appearance/-/fower-plugin-appearance-1.27.0.tgz#6dd807e898a14a2cb5f982ff7144cf8cdb408220"
-  integrity sha512-KYmDRPfD/GMRLuu2zZh4ZoUWT4mssCkttt471qWbku0pz6Wltz51Vo7tB92ZR+Po1cKre3tnuizei8lTzi8Y4A==
+fower-plugin-animation@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-animation/-/fower-plugin-animation-1.46.0.tgz#b213c9786f165e617a19063ce276010bf90b8353"
+  integrity sha512-6EUFQfGNaXCouzo75nYAxK51QkphtO6WC/Ses73IqH056evuPYm4Vl8UK6YwHxO8tww4UubsFBxZ7LydMFWWlw==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/color-helper" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-background@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-background/-/fower-plugin-background-1.27.0.tgz#1a16a5676104b86f19349a68e4562b82401266ef"
-  integrity sha512-SPa/1WXbgzHlT5LC8xhV+F+D9k7a17sAxZI6oO7zyEvko5thZhxdjUDQ4t/MvSGn+SaoFqgKYfxafg72QX2CIw==
+fower-plugin-appearance@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-appearance/-/fower-plugin-appearance-1.46.0.tgz#7e25ce38fa7ddb87b155f064073c96abe6d5139f"
+  integrity sha512-iv7H3PqhroT+QSRMdeHQsAuCfo9zAQAlbJJ624H1wDXRICj9+MoAnjMg/smRownNCjwWFFLe/51/cMKR7iwlxA==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-border@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-border/-/fower-plugin-border-1.27.0.tgz#3dc4e6e519de467f553f45bd81f5cea5580bfa77"
-  integrity sha512-WayDhgjtNXfsXrMBqM8DNunZjKr2eqtp4Ujq4wJ9GaLMHt5csXCxkFuqoWn3xt8FeTNZ4kkVPSykTB9wrG4cCA==
+fower-plugin-background@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-background/-/fower-plugin-background-1.46.0.tgz#304e53ff26ccc165212c677767f623a779110455"
+  integrity sha512-nXvEV0sKfGONexDWdF575qn8JbZBWXV7R2OaAkk/LYIjziKGjBD3JF3DB9Xx7zRW0gUCKp+3ejPVi7aRvTEtkw==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/color-helper" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/store" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-box-alignment@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-box-alignment/-/fower-plugin-box-alignment-1.27.0.tgz#f30935a4ea724e9fa6caa98f64a9bef0cd05106d"
-  integrity sha512-Gb936G+OrB7uNC/z8OQ40lU9E4jGFdbo2415qqpXHsRyxpA/VB+EJi525CTsXD8pWey3IFbavrCk1xCtFyGDdw==
+fower-plugin-border@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-border/-/fower-plugin-border-1.46.0.tgz#ffccf3ff081cb01c251a85f0ad7ea3461fb402f0"
+  integrity sha512-xtIf3M09hDQKU9cPitt9ENVyL9cRO6Bhc/3NkYBx35vwy4w+1lC+L8g/B4dFU2Pt4oOWRGJYYnG4eWbvfHz5PA==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-box-sizing@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-box-sizing/-/fower-plugin-box-sizing-1.27.0.tgz#34f940ea4be503db41e587324ea7805e29cb0d1f"
-  integrity sha512-7R0/pKmiisVJXgh0LwQbhMeIOEQvTi+nGoVTmCwcH837eoobNSnDVpkO0ouO/TXR5+7+FHp4bknqDP+1ol0rXQ==
+fower-plugin-box-alignment@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-box-alignment/-/fower-plugin-box-alignment-1.46.0.tgz#4e8b9fd59005cf3511d7fd77359c37201cfb7727"
+  integrity sha512-qOXKHLqOC0S7I4fZbGOWc8kAAASfDYkOVI+O7GwZYJUS+QrIs+MVhDew/evmpMhF1f8sGs9QExaAcLw4aShk1w==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
+
+fower-plugin-box-sizing@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-box-sizing/-/fower-plugin-box-sizing-1.46.0.tgz#0ce77e8000e7259e4462b0fc5a224d2eea5ae5b2"
+  integrity sha512-wjgvZ2qzTjFYpXATrrMZSskEpT+rpHTo52PFRaBIcn6Cpd1hzFVG1eRXE8B1JcNyeWdUwgPXIAOkybZ8ni/WuA==
+  dependencies:
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
     csstype "^3.0.8"
 
-fower-plugin-color@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-color/-/fower-plugin-color-1.27.0.tgz#d20d7518cd5d3f12070b3ede973c4d9165a10395"
-  integrity sha512-GTsFMYrbOdf1E0z0kFcRMN0t2kTBc5+/FlPS2H8iIiWaq8Ig3w3vkT9ih8T3/YMDJoV2TeVwcNRQUmoFeZ/rTQ==
+fower-plugin-color@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-color/-/fower-plugin-color-1.46.0.tgz#08ea16faf4ab23e23eae819b29e8bc5c45ffd294"
+  integrity sha512-sKCq0Z9SDJc/cWckmnMhYvSyynUBNdaDpmh57ofhYRCky8JoPK36TE5G5RnVfo+i+FoadplaOpTup3pT0Lo7oA==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/color-helper" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/store" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/color-helper" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-cursor@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-cursor/-/fower-plugin-cursor-1.27.0.tgz#14242226c8faa4fbe7abab38f8fbd9779b1229b2"
-  integrity sha512-NMvY8TSDuyqHFmZaLcy5pJYtCrcJufKu95WlQZEDxpt42TEjL3xP5Yvdi0HQXgG8UVrayPRg3L4CDpJJNEpQbw==
+fower-plugin-container@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-container/-/fower-plugin-container-1.46.0.tgz#84489eb2ad9a13e776c9cef2970800f5d7b3c0ec"
+  integrity sha512-Ryxtyk9SczahYHHld9MNLL5cnTz8EIAq8UWu5HNokGZC+Df2mCpBf/fmOEg/rzDvXT/Y40m2+KKAa32yBxB5Ig==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-debug@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-debug/-/fower-plugin-debug-1.27.0.tgz#60cc14591f046b9958debdb3e8d7cf49e5e47693"
-  integrity sha512-gvn3NE4d0EpV84YHYvzBVoveBlcnm4fawxkuScSiTRibBBlgBxpWqSpDCkcixcAJfnAHTqjwJed9I6iJNXWhZQ==
+fower-plugin-cursor@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-cursor/-/fower-plugin-cursor-1.46.0.tgz#077d48d8fd0bdfc611cd507d6ddf7b6bc4228dd5"
+  integrity sha512-oM5Xj+4wWcGC8WqI3ge4VEWQjpSVo62biISlqG79gDsz6/C1qErsk7g/Sjk/KIs29hRlcehXH+njJmkCgx/sSA==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-display@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-display/-/fower-plugin-display-1.27.0.tgz#91baa1b8f240072a70b53c9abfa00bbe195c9495"
-  integrity sha512-aXp/axjwIYdWCa6GdxuS4OQEBdWjTJPa5qc82gZ4M2ohiW4gttzV0rDBUU61ZPdkOQbjBaZ52PYyDvEjWygw2g==
+fower-plugin-debug@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-debug/-/fower-plugin-debug-1.46.0.tgz#cad5fe4d18f6c112997d0aad9b3e9c3ac60f450e"
+  integrity sha512-ZMVQfEZtN99v4QWN+0tqEZWHNTBrLWQfSoSVg3iOShEhawfl5qokPzMUwG6mmofuoMHL/UTvWp7zi5men3oE1w==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-ellipsis@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-ellipsis/-/fower-plugin-ellipsis-1.27.0.tgz#80ba84ec31a21ac7d697e6d6eb632c2f9b83ba23"
-  integrity sha512-trnGPitbsL17U2huO2TIHDwf4TukxAYnnlqJWIAzM7Sf8x1LdkuFtRpEZ7nAJhXh6p9Pj9/4XroISHonM4PG8w==
+fower-plugin-display@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-display/-/fower-plugin-display-1.46.0.tgz#c815f7678c40f3a8e930ba887660da31b0597ac2"
+  integrity sha512-qJj1FyLjWM5D4xzzq1Z/oAAsSucHLvA2dLAJtAFWfDkzJaunX/U7MpSsIY/jhxMEU+6bO/NndJRSr/5Bg2d4Og==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-flexbox@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-flexbox/-/fower-plugin-flexbox-1.27.0.tgz#98fce8ec371f43fbb916aee4ba76c5adca99319d"
-  integrity sha512-rp1qVNYr/pMjmmbY+5Jt698ndjORd/dfjUUJpBfi8zGw/iWlbXu9YD0ku9OTaFJ4W1Xbi/UaNqrUR0SqkL3e4Q==
+fower-plugin-ellipsis@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-ellipsis/-/fower-plugin-ellipsis-1.46.0.tgz#aa5a092eaad12219954e76dd35f6e3c05d16db56"
+  integrity sha512-WREQyDSqGLdTq25XsTcjxmfvcisxgFDO/rcZJo7SV4/BdLRGb9gpDixWEGt8X0ouJmyPJVW5rQ6xhGH9WJLcgA==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-font-family@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-font-family/-/fower-plugin-font-family-1.27.0.tgz#31211879a31c511e46338897ac00b2a674fe8a5e"
-  integrity sha512-C7ftQGYgecbBxNFrWtgzWDlFmjcazCpDMxDuniImly7wh3/TEvM4Qjmoz50bjBVn+q1hAKKayzkJgTgFUO249g==
+fower-plugin-flexbox@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-flexbox/-/fower-plugin-flexbox-1.46.0.tgz#190cb8828a842b3690547e5e8e77b14fbcd5f621"
+  integrity sha512-51NRSwWssmuCXr5YbEPs5C9M8giOX4TRuQvKZqeLNvZFQsKjMSoT/zVSGynQjZC3v1DiJ/iua8pA7AiyxMxYdQ==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/store" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-font-style@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-font-style/-/fower-plugin-font-style-1.27.0.tgz#a2aed55dd3b4e1d4c84aa06893cb323f01f3800c"
-  integrity sha512-5U39v/UH5jP3aAU1yp68vhP2ECeQTOqveXfsr/LvOFGbZMLI1YGXthOuFUJypgiVmdzlOGUWEYLFHhbNOH3PeQ==
+fower-plugin-font-family@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-font-family/-/fower-plugin-font-family-1.46.0.tgz#95946cc1a8c115088b1c86fd2c7fcb168ff0b287"
+  integrity sha512-cFaBCXSYu5Sr1evdUN4xFiidTeJ45cbBbiiorr7rnHEzPEDRbHzc2syEHYF1bzjg1I/n+l4X5W4ndH7nT+ppoA==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/store" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-font-weight@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-font-weight/-/fower-plugin-font-weight-1.27.0.tgz#e36458ddb787d0168574df314395b6a89041a7ca"
-  integrity sha512-quySsE51D5ABepY+fXbVZPhoFNoS2Qx0/tfEjp1qobTs9/4O5knhXIpNmJZ3t+hcPhN0/3aAnzMJEMO2fl7Clg==
+fower-plugin-font-style@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-font-style/-/fower-plugin-font-style-1.46.0.tgz#d701521a8e7fcb869f316bacfc5ee38749335304"
+  integrity sha512-X5SNdboTk1525GY6zv9Rtt//WAIgw1OkUqlHk/wLLyzTWNgyY1ESl04cSX4k5u2LUnzJDwHeIXujKLe1cmNbSA==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/store" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-gradient@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-gradient/-/fower-plugin-gradient-1.27.0.tgz#325e5c0159b2e29994951d0aca86992deebb3a97"
-  integrity sha512-ComR4Nqa852DJEpD9+vHcLTiXJvea8lESZOCUpeYHhefaVtaE9d5GIoTnlfaFZ6iTPI/zkW7zEcIy9paBiCyGw==
+fower-plugin-font-weight@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-font-weight/-/fower-plugin-font-weight-1.46.0.tgz#9b25873c1dbd46af4159764c4e38efa36d7ee624"
+  integrity sha512-vBITJoVytB+ilEE18qut9YJO2a9xsfH2DBshBnj4zo2kZg1Xaa9y9bG/y1lQK2v1qkMkR7q6ec3m5+yLCxkyeA==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
+
+fower-plugin-gradient@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-gradient/-/fower-plugin-gradient-1.46.0.tgz#74509b745818d7a10e8644f25dab2080404815e4"
+  integrity sha512-IAfbUnBl89veMMicOjqz2rj6WPOJi2of13MlH2UoueHSSRJlXcCSoYqQ99r7VaIqVL5zz7yyxeYLc7+O5C4FNQ==
+  dependencies:
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
     csstype "^3.0.8"
 
-fower-plugin-grid@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-grid/-/fower-plugin-grid-1.27.0.tgz#9164d037ea7c2588b40724f0cd50f4705afc04a3"
-  integrity sha512-tQxGTm2pe/eTx21/BA4DZhdvcpjdA4a+RoN/kCn1MFqHKX9AA/tZDzRYoN10r2vIAENyUafFpMd6wwtLKUDxcA==
+fower-plugin-grid@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-grid/-/fower-plugin-grid-1.46.0.tgz#791e91c9a1565a30f79f7cf61fa69f29f54e64a7"
+  integrity sha512-ktGKMCP/65MKiVZtjLJ6PCEwxYTzN1Fpetne9sKGoi2GJnSTqrrgdAoZCtYzoDCMIj9jwVJw1HqQbEzIViDsSQ==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-layout@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-layout/-/fower-plugin-layout-1.27.0.tgz#3088eb367ca8b7c8e392bb472bbf135b1f5c531e"
-  integrity sha512-2IL7KG/JyeVL8lXx000RtEXcqx01lrQHaVjgfgXAMFaBn3uiPqsKhijc67Zbxyjk69Otc/M2nouANjPcvTIJSA==
+fower-plugin-layout@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-layout/-/fower-plugin-layout-1.46.0.tgz#218be18a5b815ff5335ba553bbafb0720b16fd62"
+  integrity sha512-TW/axf2BTQLJUNoMWooZnNJ/x78CK/2jZzkDvhKDYPl5epL5ddWwrwi2eZj7SWuXOTj0Jp0kWsRHUDsrrYUPRw==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-line-height@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-line-height/-/fower-plugin-line-height-1.27.0.tgz#a461556bc01423001ba2d057d952d0d25383a9c8"
-  integrity sha512-UmbYpCICr6TF4XF98R9l9dC6yCnlgYTlqR6IaMG80pFJsrmM1Hpb2Lrty0H18ETDas5TNRRicD1yKQMxt+TwMA==
+fower-plugin-line-height@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-line-height/-/fower-plugin-line-height-1.46.0.tgz#882bb43c90fa5c3f28e18d6609f51a9685bb51f3"
+  integrity sha512-HXoRIMfT/8FGeBEw3wFtgRkJhPmOw4BX79POJiy+4yfjrf9yvSQV1i3knBc9//mr9NCi8mhZE5sxV2FT5lClgg==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/store" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-list@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-list/-/fower-plugin-list-1.27.0.tgz#eaa5a96e97a4663a31d5e3cb6509e1a568be65f5"
-  integrity sha512-H58dW/OBuN451oldq4uMgX3TmEHUQSAur4S7mLrpSxpeAB5MPBWRiZDGx9ibkx1l3hO+GitEB1Rqv+SakNQFCw==
+fower-plugin-list@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-list/-/fower-plugin-list-1.46.0.tgz#e6c306e40e53211d5c6bb3fb2ff7885e8fd44a05"
+  integrity sha512-wgzZBsFtvB8jFnPCD3qyWFXFVcIwuuVTQ6olDKMQq6nZ+Q2t+nlLe0QK6LeAa9qMxLqmuvWvU/rcYLJByBl8fA==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-margin@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-margin/-/fower-plugin-margin-1.27.0.tgz#8b5b031185d5847530cb5d05b2ba2fe68ad9b7d6"
-  integrity sha512-YhiRayE+JOJHl2SHURdSX1Lw2zpWrRwi94TaIzFYwejal7rUZY0jtV+IZZKpjrLCYeaoS45+GfQ1PakyB7rbug==
+fower-plugin-margin@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-margin/-/fower-plugin-margin-1.46.0.tgz#f32e41f84168c81cc4c47b545d674ec66bc82b6a"
+  integrity sha512-hldy5AZgjAD4MKPWb5FVM26mnvdzGHqYwjhl92UDz474cMFOlgWbeUMqjg4nHCIa1eJJZa+x+xiZLkDsXp8NtQ==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-opacity@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-opacity/-/fower-plugin-opacity-1.27.0.tgz#9361013f75416796eae0d2814c05b5aa58bc8424"
-  integrity sha512-sLfBkAT0jYAjIur3Z3DgdPkiTT7N7ZvOl/barKgZoJtMwmNbIRZVEnGJplY0DDRxXnGL508ZrYlGy7BcPJg1Zg==
+fower-plugin-opacity@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-opacity/-/fower-plugin-opacity-1.46.0.tgz#8a62d8e13a55db82480adc6a092f9237f3051082"
+  integrity sha512-GqDACdkDcPl95TreZvLvrT2U4CglP0V8PF9x3N6AcK1j/IZtzf2Dt++ticXI/hrjBbBraQURdyizvj8ePsB07A==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-outline@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-outline/-/fower-plugin-outline-1.27.0.tgz#86985d8b1db46ace1cef9fdc83b1227671206052"
-  integrity sha512-F8AMZ52P1dVWem3azwDGYlw+pljcshl6hgzMKPHDR9w/iOmjIFAk/WIn4UFf56Dk1kTygN4KSnmfeqULzbsxHQ==
+fower-plugin-outline@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-outline/-/fower-plugin-outline-1.46.0.tgz#3a5b6d804408c0e01598fef05440a2d6232a7788"
+  integrity sha512-//eOb6xKIrW8gi2RJOGQOJoPopijg/a3HKt4TuCcFML/Q4NBJSr9hY8hObGa5xALiVDdP2fCHZA7s8qI5IooaA==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-overflow@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-overflow/-/fower-plugin-overflow-1.27.0.tgz#40ab23ca1d923181f51438b44689e997e770f2d0"
-  integrity sha512-liPNCK8ZTovL4QO1saa2qDCB5AEBadzMxpsOuaoeScMijTz7GqkCYkO35DXUFlB7pqANHgaXKVydpK2+akAFPg==
+fower-plugin-overflow@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-overflow/-/fower-plugin-overflow-1.46.0.tgz#862e28eb96ef5c2f2649a545e7ded64ded3f57df"
+  integrity sha512-Yje50YIvCwvF8xFfLc9l07Q0mn1hS6dQAjq8NWB9WCdDyyNgQ1inOdo/0TzR2SU2dgl7qMt2+2l1b66tuuvhRw==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-padding@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-padding/-/fower-plugin-padding-1.27.0.tgz#2dd69904c62a8a63c25a7942ae38a7497e8da68a"
-  integrity sha512-L9iYad8kgdLj3oJAJmQBXO+YSgGYMhiigRdQRu3ayIlR0kHMKPnK6dSxT7yMXwHHTsXkJmT+Lym7wgEo7pfuhg==
+fower-plugin-padding@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-padding/-/fower-plugin-padding-1.46.0.tgz#77d8b11739eb4b52eba2ec9b80d9c3e5cb3804f4"
+  integrity sha512-hmbNXjZElK8G4HqRGVuSdAlWvyB6lUk7aoFZt6rcdzau77maD38N3OLlBClkE1NjcQQIsoADZimutzu3qZ2l3A==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-placeholder@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-placeholder/-/fower-plugin-placeholder-1.27.0.tgz#1be1aa3280e4c1958143bb1cfe1a341d8814021f"
-  integrity sha512-TigSM0Ajkxpav2czNpckXvknYs9sNzsSVV13cOzjLfUNdIKTeWVnOnpmTNwpjOZax4EfIi74euWS9ePqe/w5RQ==
+fower-plugin-placeholder@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-placeholder/-/fower-plugin-placeholder-1.46.0.tgz#67b9a659a7ef59156d32f2270eeaa2ada2b82152"
+  integrity sha512-jHTKwT0oDiGjpTAE6rORP2DD26TK4Rs14Sj40b0sBeJwfWZLXBiZWB5mEp5Rn2Q1JTazM/VYKJGx8e+Pc7zw4w==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/color-helper" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/store" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/color-helper" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-position@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-position/-/fower-plugin-position-1.27.0.tgz#499981f783ec51396262555dbb472097f4f707a6"
-  integrity sha512-OAsNhQ9OBm9Y2dQNZrL+Y1sRmrwVpRl28WCN6+1QMzKS2VZ//fxa5Qp6i8WJt5FyZujcu1Ji+BjqNySJH2tOvQ==
+fower-plugin-position@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-position/-/fower-plugin-position-1.46.0.tgz#1bb796c6e809d87ae913ccac1fd71fbccea10d2c"
+  integrity sha512-rTvL+UumiQAFLv5HpzvgLf9HV1FaK3zFwmBy/t+46GKU+5MT6z5d8MNhPIWKbwr8Sv31CbzIpwiFZUTS2s7Rng==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-ring@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-ring/-/fower-plugin-ring-1.27.0.tgz#286244d8a4a69a5890bd69a92db90b672b712bc1"
-  integrity sha512-nbBkpaztgHw1UktJUw4RjwYu8R9/PBGU+K8flDvBoFfppJiqk4T1dZQ8QFGDcnmFK0WhrbKewO0kQjYzczpEHg==
+fower-plugin-ring@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-ring/-/fower-plugin-ring-1.46.0.tgz#699a3ac0533ba416bd90e02fd1852bc52baea5e6"
+  integrity sha512-oRtHKGl3rjDleCKAgLBgSJyWrCXeaU8brbJw2oNZsHTXKt876ErPYufXemEwInQpJ4vpQI95hnLZhb6TEl3bnA==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/color-helper" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/color-helper" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
     csstype "^3.0.8"
 
-fower-plugin-rounded@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-rounded/-/fower-plugin-rounded-1.27.0.tgz#5c0616ae4fb67de22f2a3a902093b7171e006bf6"
-  integrity sha512-ApL3UNWGjhCC0C83DGaI4oIC8B7MlikWZ8ytjH2FC2mq1mUm4RONz2ARrNp5cWfJj6w81yrQV5lba9s/8yIkFQ==
+fower-plugin-rounded@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-rounded/-/fower-plugin-rounded-1.46.0.tgz#8786ad3c05227ae001e0b241f6cc99dce9ff15a6"
+  integrity sha512-hoi68yWvIyFIjN7iLHVBGPopwosStlg7Pfzu9GkQl1Cz2V/5Uk+hAwIl3Rdh0OaKuY6Pyk3V0BGF9UJ26NiOqQ==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/store" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-shadow@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-shadow/-/fower-plugin-shadow-1.27.0.tgz#ac722fd1a2891d98e31967aee7fb52beb37061ea"
-  integrity sha512-PCSWT3JFjmYn+IRk00yiL653Jt3FVl/m6YKBLkTrSOZctbjnW/QCtZFybv5tN/yLAvlnFV0joQa/+d5hWEYt1A==
+fower-plugin-shadow@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-shadow/-/fower-plugin-shadow-1.46.0.tgz#177ec62d1939cdca932bb0f5af403e1166c85acc"
+  integrity sha512-xd74qUBj2tRDDsP6fNtNSFkggB7U/B9rOSJs9Lqjg/h4J5CA3QHWHe7iqp76GETPgmS5fdGJomTBwoORLRfNxg==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/store" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-size@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-size/-/fower-plugin-size-1.27.0.tgz#64ed822cad28d9c669c5f87f5aea9767184f0cee"
-  integrity sha512-iDvXi9f1/20OAstIuOcU0NbbyJsWxR13LhFthWbVhCvtMJORo+VxgFQIZSCTKW+aY8wBeYv31c8MNqExdPMbtw==
+fower-plugin-size@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-size/-/fower-plugin-size-1.46.0.tgz#275e649275c2b10912a5b0bbcce97f20520e734c"
+  integrity sha512-27Fs1+iJ9Fd6FZ2S0CgnotPnQbpRJftPdpX8P2iv3CUoDePA2B4goDHNJurUsbRWDQ3iagLd5al+lGOA4PVxEA==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-space@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-space/-/fower-plugin-space-1.27.0.tgz#7aba350463b7a81eb5912f657ea614f7931824ff"
-  integrity sha512-7k0m67Pe+9qEFdqusB55IKf3fJo4cKfR4pmr8UHyZY/EnOpFFsMxFPFv5/L9gZn8yOsIbmyZubClIyYvmdEgKw==
+fower-plugin-space@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-space/-/fower-plugin-space-1.46.0.tgz#0d5526eaf6144e4b634efbad9e91cd365ef85c0c"
+  integrity sha512-uJZ2rWKKGCLSRMSoraYZpA0wyBxr4BIhRnaDyFdakDf4keUWo74ivh22mllO3OEiTYsA2/R4A0JySmqmSbm9Yw==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-svg@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-svg/-/fower-plugin-svg-1.27.0.tgz#214686e4ddeec08906e2f0e2a7c4d3a12b1d4278"
-  integrity sha512-BNmQ3k5tRcgwzSGUFLrko7Sc8YkT462FULgP0VJDaThnQ6PYW9dUimgUz5huCL1NxRSrvNvMz0w1Le7b2UjqoQ==
+fower-plugin-svg@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-svg/-/fower-plugin-svg-1.46.0.tgz#eb8dca26cf9fba28dac56a74f103312939afc8d8"
+  integrity sha512-1Fzx2exaeMBtx6xVa1LbP4z1hdiMHVEZpaQB+sknG0Xirj9ko+bWzyQ6KGE7B8YVmoS+C2iJHu/LzPluQSdVog==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
     csstype "^3.0.8"
 
-fower-plugin-text-align@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-text-align/-/fower-plugin-text-align-1.27.0.tgz#d0eed4dbdd189e3b9c4017b4828e8bc70cabbd0a"
-  integrity sha512-nrEkX8PNTEGdQUoGV9TnPnZUaG27NB9Npatt74ul5mYbUHJR2pMvbDcdCwBhIObnSr0l+HtDrrP8EXmKycssHw==
+fower-plugin-text-align@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-text-align/-/fower-plugin-text-align-1.46.0.tgz#a31e1e61e6fb2ddcc1713b78421a363060e28117"
+  integrity sha512-UV5LGlboi0lPq14UNg67z1bn9XHD3OY5a4fs2/cJHLb6xVN/uosuk1/h4RUMTb+P4mThgTxRfXwlDA9/9uF+Sg==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-text-decoration@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-text-decoration/-/fower-plugin-text-decoration-1.27.0.tgz#24178e47ed1a2007d6a7e2e3fe1cbb003cbf5fda"
-  integrity sha512-j1RCDqw3J4W+f9nNYT16Ti3jwLfrHDxiiqElmcL9NVZKx5XiDT4j2/NJ1qfce0jS1yOe4IN50TL8SnzpXezTZQ==
+fower-plugin-text-decoration@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-text-decoration/-/fower-plugin-text-decoration-1.46.0.tgz#72e387563c27c63aabb8bd287e669d7b46953963"
+  integrity sha512-yRvOWIFsBc8Y78KbEc8N18deO59pi1DSVlmi0tb8jbby4ZVFX3dDXsjy5/NDvUo9oVNIqYpu8rwT6qEnMGdEPw==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-text-overflow@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-text-overflow/-/fower-plugin-text-overflow-1.27.0.tgz#38925773614077c0792364ae936f16f2d6d74eea"
-  integrity sha512-H8LnkrJ8me+3q0Vcu13pAe8L7OzSXXZdNJJ1H2MHH1MQt08CfMItA9DWJa68+a9HlxKmEgmh4K76LfH96Tf8DQ==
+fower-plugin-text-overflow@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-text-overflow/-/fower-plugin-text-overflow-1.46.0.tgz#c8cb91278044a95c87942700742228771211f131"
+  integrity sha512-VyVvzvXLtRU00RR1cj1BiFAs1km+qIk3SIXj6tDpxCN9/kzrjV7Rd20HbQkBXzCI+Qod8HUc4briiKcq8FemMQ==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-text-size@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-text-size/-/fower-plugin-text-size-1.27.0.tgz#a154c3f6a79f48159ec12163ba3189dcbaacad50"
-  integrity sha512-656YjeFIef66MFps+0PFxT21OuW9Ha7m5EHavjIFj0qfXaP7+op2sxFPDYBt4VCkr5GerSIo7fmP182LWPgGoA==
+fower-plugin-text-size@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-text-size/-/fower-plugin-text-size-1.46.0.tgz#f15845746adccbdb9b859cef7b38456a9ef22733"
+  integrity sha512-ZxD02LQSQoZBuOoM9oLObWo1kNJgbXTIqWZd+UWntG9GmTVs98CixH2vQpKKVbfNTB0qVhD8gfxdmWw6pxbNpA==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/store" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-text-transform@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-text-transform/-/fower-plugin-text-transform-1.27.0.tgz#65a7d1e69e0d5dee86ee1ac2cb1574c41393940a"
-  integrity sha512-NJRFias05/k4W6AHwNwhPDLT2iiuIQWv9YTeBV6JMTLK5DjuTAs8wvTrCnPSXcIilc9fspev/uRhiImOK2OWIw==
+fower-plugin-text-transform@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-text-transform/-/fower-plugin-text-transform-1.46.0.tgz#be029de550a042249942cca2ea0653f897fffcce"
+  integrity sha512-kpH5edWAYIUVa718syh/7klVKQZCZMtYfWmYTtChKOEOUFY/yZLADiho5jSC8TIx/a+6Q5hrp7vCmEYC5pjB5g==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-transform@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-transform/-/fower-plugin-transform-1.27.0.tgz#590b37579a7bb0b8116ef3700bb2676d583abd9f"
-  integrity sha512-+0kZgjDac3k9CeP9Oe8ULgKL9Y7cpYuOUJ8PLG9gP4RITGm40NSY7PXy/xCdgO2wBEvA66k4UiQgmigTIgbdmw==
+fower-plugin-transform@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-transform/-/fower-plugin-transform-1.46.0.tgz#d44d8daf6c7202917f317b2669722f5e015d930f"
+  integrity sha512-Ekbz+7aFrMu6H++KQUiKgtZLLQdFybZNjoViFyd2H0AeqG7cYZFCRpAPC0ncTAPvl1o0s1UUS+f8nGOgvwDx4A==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
     csstype "^3.0.8"
 
-fower-plugin-transition@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-transition/-/fower-plugin-transition-1.27.0.tgz#891e3c38f1610a60d56f70937b814302a35140fa"
-  integrity sha512-s8xCFejcFe4xn3kWm1i+FtBYm+X5KscWt+vhRJf//m6cDCQ7YKw0Iecp0XS4LcS78vX4RhcjXfkQaccPQyUqnw==
+fower-plugin-transition@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-transition/-/fower-plugin-transition-1.46.0.tgz#f687e963c5e2dfd828771e4b0bafe580c74af231"
+  integrity sha512-hQexpah7lFRxvpIaGYRPJmfL7n+Qx1U6/QRotg4Wa5N0Cq4C/NrHiFWAYEnx0pU5psUSLx2pa44snCdEmdhj6g==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-user-select@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-user-select/-/fower-plugin-user-select-1.27.0.tgz#101a707689b9e8ac03ee3b8cb423ffd5c9f61902"
-  integrity sha512-sLwi/EbBgZckVS5Uwx7CZlzQ23IUEVdsIA6Ha1ZezNPJTYgaTeKe2EP9/Wvh6Z9rDCdrT+DfUnkYlfN0VtVpNA==
+fower-plugin-user-select@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-user-select/-/fower-plugin-user-select-1.46.0.tgz#351786488bb91b9e731e39c37a8c3d5daf2fffb4"
+  integrity sha512-Q4VculbUMwqClkdzmORaVEuGC6zSp5Tp3nM9lmVTEazB+LQLLEseufvyCke6RLCmgf26zOEt+2iN6Qzh0RfGiQ==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
-fower-plugin-visibility@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-visibility/-/fower-plugin-visibility-1.27.0.tgz#fc028cda976b01dd7d2cd6e5ee79c3a0dc35ffb9"
-  integrity sha512-JEGx1eTj6TIKwyU2ANoP8gaUPas3JmpeQZ1C5W4RluiROnHVtxUERlezWY3wTZdBiabGq+gf55Y7f9zTFsmROg==
+fower-plugin-visibility@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-visibility/-/fower-plugin-visibility-1.46.0.tgz#5ad813afcfd7f4e25605ab2f0f3319927603472a"
+  integrity sha512-WtIlnRRpwVSe0wRmiKQCvCm17JpOb/g9fO+bggGXXOLuRu1BD+U3rAUfJ5IheVhlG9Wm3DP26MCDLP85fqNp0A==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/core" "^1.27.0"
-    "@fower/parser" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
     csstype "^3.0.8"
 
-fower-plugin-z-index@^1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/fower-plugin-z-index/-/fower-plugin-z-index-1.27.0.tgz#963ab19231a44d168ddfb1a928a3a9236fc7f9d8"
-  integrity sha512-Vzch8Xu0YmhiDoVZv8uwaF+8PtybtmYQM1X3qAgDzyAWnrEiP50u6bn7vskFBOxYzKFO43Jr6faS8Ugb3e/BPw==
+fower-plugin-z-index@^1.46.0:
+  version "1.46.0"
+  resolved "https://registry.yarnpkg.com/fower-plugin-z-index/-/fower-plugin-z-index-1.46.0.tgz#412ba3c5b5c6d6ae783f74ae43128349e81499d0"
+  integrity sha512-v6xTQ0hOimQLk4ed7bSpUoO/Ljl9gf8e7T8vz42W+r1M/5xwIRQuNBjZnMC0OrZR5VGfTmuiNQ3WSBCTDCcX4A==
   dependencies:
-    "@fower/atom" "^1.27.0"
-    "@fower/types" "^1.27.0"
-    "@fower/utils" "^1.27.0"
+    "@fower/atomic-props" "^1.46.0"
+    "@fower/core" "^1.46.0"
+    "@fower/utils" "^1.46.0"
 
 framer-motion@^4.1.17:
   version "4.1.17"
@@ -2732,7 +2688,7 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.3.2:
+hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
   integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
@@ -4264,7 +4220,7 @@ style-value-types@4.1.4:
     hey-listen "^1.0.8"
     tslib "^2.1.0"
 
-styled-components@^5.1.1:
+styled-components@^5.1.1, styled-components@^5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-5.3.0.tgz#e47c3d3e9ddfff539f118a3dd0fd4f8f4fb25727"
   integrity sha512-bPJKwZCHjJPf/hwTJl6TbkSZg/3evha+XPEizrZUGb535jLImwDUdjTNxXqjjaASt2M4qO4AVfoHJNe3XB/tpQ==

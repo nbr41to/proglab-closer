@@ -1,6 +1,6 @@
 import { FormEvent, VFC, useState, ChangeEvent } from 'react';
 import { Box } from '@fower/react';
-import { Button } from './Button';
+import { Button } from './Atoms/Button';
 import { Send } from 'akar-icons';
 import Router from 'next/router';
 import { postContent } from 'src/firebase/firestore';
