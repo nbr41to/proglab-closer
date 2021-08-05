@@ -19,7 +19,8 @@ export type ContentType = 'chat' | 'report' | 'next';
 export type Content = {
   text: string;
   name: string;
-  colorNum: number;
+  colorNum?: number;
+  color: string;
 };
 
 export type Room = {

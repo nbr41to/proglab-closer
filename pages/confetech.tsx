@@ -1,12 +1,8 @@
-import { Box } from '@fower/react';
-import { ChatAdd, Pencil, TrashCan } from 'akar-icons';
-import { VFC, useEffect, useState } from 'react';
+import { ChatAdd } from 'akar-icons';
+import { VFC } from 'react';
 import { createRoom, joinRoom } from 'src/firebase/firestore';
-import { Room } from 'src/types';
 import { Button } from '../src/components/Atoms/Button';
-import { db } from '../src/firebase/config';
 import Router from 'next/router';
-import { RegistrationUserName } from 'src/components/RegistrationUserName';
 import { useRecoilValue } from 'recoil';
 import { userInfo } from 'src/recoil/atom';
 import styled from 'styled-components';

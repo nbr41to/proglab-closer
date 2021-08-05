@@ -52,7 +52,7 @@ const RoomPage: VFC = () => {
   };
 
   return (
-    <Box>
+    <div>
       <PostForm
         open={visiblePostForm}
         close={() => setVisiblePostForm(false)}
@@ -63,8 +63,8 @@ const RoomPage: VFC = () => {
           content={rouletteContent}
         />
       )}
-      <Box flex toBetween>
-        <Box>
+      <div>
+        <div>
           <h1
             contentEditable
             suppressContentEditableWarning
@@ -73,63 +73,60 @@ const RoomPage: VFC = () => {
             {roomInfo?.title}
           </h1>
           <p>{roomInfo?.date}</p>
-        </Box>
+        </div>
         <Button
           label='post'
           icon={<Send />}
           onClick={() => setVisiblePostForm(true)}
         />
-      </Box>
-      <Box>
-        <Box flex toCenterY my={20}>
+      </div>
+      <div>
+        <div>
           <h2>今週を振り返る</h2>
           <Button
             label=''
             icon={<ArrowShuffle />}
             onClick={() => startRoulette('chat')}
           />
-        </Box>
-        <Box border={2} minH={200} rounded={8} flex p={12}>
+        </div>
+        <div>
           {roomInfo?.content?.chat?.map((content, index) => (
             <ContentCard key={index} content={content} />
           ))}
-        </Box>
-      </Box>
-      <Box>
-        <Box flex toCenterY my={20}>
+        </div>
+      </div>
+      <div>
+        <div>
           <h2>今週に学んだこと</h2>
           <Button
             label=''
             icon={<ArrowShuffle />}
             onClick={() => startRoulette('report')}
           />
-        </Box>
-        <Box border={2} minH={200} rounded={8} flex p={12}>
+        </div>
+        <div>
           {roomInfo?.content?.report?.map((content, index) => (
             <ContentCard key={index} content={content} />
           ))}
-        </Box>
-      </Box>
-      <Box>
-        <Box flex toCenterY my={20}>
+        </div>
+      </div>
+      <div>
+        <div>
           <h2>次週の取り組み</h2>
           <Button
             label=''
             icon={<ArrowShuffle />}
-            bgBlue400
-            white
-            ml={16}
             onClick={() => startRoulette('next')}
           />
-        </Box>
-        <Box border={2} minH={200} rounded={8} flex p={12}>
+        </div>
+        <div>
           {roomInfo?.content?.next?.map((content, index) => (
             <ContentCard key={index} content={content} />
           ))}
-        </Box>
-      </Box>
-      <Button label='achieve room' mt={16} onClick={achieve} />
-    </Box>
+        </div>
+      </div>
+      <Button label='achieve room' onClick={achieve} />
+    </div>
   );
 };
 
