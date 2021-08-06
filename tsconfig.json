@@ -20,7 +20,7 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/index.jsx",
-    "src/components/Atoms/Button.tsx"
+    "src/components/atoms/Button.tsx"
   ],
   "exclude": ["node_modules"]
 }

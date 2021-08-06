@@ -1,5 +1,4 @@
 import { VFC, useState, useEffect } from 'react';
-import { Box } from '@fower/react';
 import { Content, ContentType } from 'src/types';
 import { ContentCard } from './ContentCard';
 
@@ -28,35 +27,8 @@ export const Roulette: VFC<RouletteProps> = ({ close, content }) => {
   }, [count]);
 
   return (
-    <Box toCenter>
-      <Box
-        fixed
-        top0
-        left0
-        w='100vw'
-        h='100vh'
-        opacity={50}
-        bgGray600
-        onClick={close}
-      />
-      <Box
-        toCenter
-        column
-        absolute
-        top40
-        bgWhite
-        zIndex={99}
-        p={20}
-        borderBlack
-        border={2}
-        rounded={8}
-        w={300}
-        h={300}
-      >
-        <Box bgRed700={count === 8} p={2} rounded={12}>
-          <ContentCard content={content[dice]} />
-        </Box>
-      </Box>
-    </Box>
+    <div>
+      <ContentCard content={content[dice]} />
+    </div>
   );
 };

@@ -1,7 +1,7 @@
 import { ChatAdd } from 'akar-icons';
 import { VFC } from 'react';
 import { createRoom, joinRoom } from 'src/firebase/firestore';
-import { Button } from '../src/components/Atoms/Button';
+import { Button } from '../../src/components/atoms/Button';
 import Router from 'next/router';
 import { useRecoilValue } from 'recoil';
 import { userInfo } from 'src/recoil/atom';
@@ -16,14 +16,14 @@ const ConfeTechPage: VFC = () => {
     if (!user?.name) return alert('名前を決めてください');
     try {
       joinRoom(roomId, user.name);
-      Router.push(`room/${roomId}`);
+      Router.push(`/confetech/room/${roomId}`);
     } catch (error) {
       console.log(error);
     }
   };
 
   const selectRecord = (recordId: string) => {
-    Router.push(`/achieve/${recordId}`);
+    Router.push(`/confetech/achieve/${recordId}`);
   };
 
   return (

@@ -2,14 +2,15 @@ import { useEffect, useState, VFC } from 'react';
 import { Box } from '@fower/react';
 import { db } from 'src/firebase/config';
 import { ContentType, Room } from 'src/types';
-import { Button } from '../../src/components/Atoms/Button';
+import { Button } from '../../../src/components/atoms/Button';
 import Router from 'next/router';
 import { ArrowShuffle, Send } from 'akar-icons';
 import { ContentCard } from 'src/components/ContentCard';
-import { PostForm } from 'src/components/PostForm';
+import { AgendaForm } from 'src/components/AgendaForm';
 import { updateTitle } from 'src/firebase/firestore';
 import { Roulette } from 'src/components/Roulette';
-import { achieveRoom } from '../../src/firebase/firestore';
+import { achieveRoom } from '../../../src/firebase/firestore';
+import { Modal } from 'src/components/Modal';
 
 const RoomPage: VFC = () => {
   const [visiblePostForm, setVisiblePostForm] = useState(false);
@@ -53,10 +54,10 @@ const RoomPage: VFC = () => {
 
   return (
     <div>
-      <PostForm
-        open={visiblePostForm}
-        close={() => setVisiblePostForm(false)}
-      />
+      <Modal open={visiblePostForm} close={() => setVisiblePostForm(false)}>
+        {/* <AgendaForm /> */}
+        <p>aaaaa</p>
+      </Modal>
       {visibleRoulette && (
         <Roulette
           close={() => setVisibleRoulette(false)}
