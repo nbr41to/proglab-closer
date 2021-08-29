@@ -1,70 +1,65 @@
 import { VFC, ReactNode } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import logo2 from 'src/assets/logo2.png';
-import Router from 'next/router';
 import styled from 'styled-components';
+import Link from 'next/link';
+import { useListenAuth } from 'src/recoil/authState';
+import { singOut } from 'src/firebase/auth';
 
 type LayoutProps = {
+  className?: string;
   children: ReactNode;
 };
 
-export const Layout: VFC<LayoutProps> = ({ children }) => {
+export const Layout: VFC<LayoutProps> = ({ className, children }) => {
+  const user = useListenAuth();
+
   return (
-    <StyledLayout>
+    <StyledLayout className={`${className}`}>
       <header>
-        <div className='site_logo toCenter' onClick={() => Router.push('/')}>
-          <Image src={logo2} alt='logo' />
-          <h1>progLearning</h1>
-        </div>
-        <nav>
-          <Link href='/confetech'>
-            <a>ConfeTech</a>
-          </Link>
-          <Link href='/learning'>
-            <a>Learning</a>
-          </Link>
-          <Link href='/mypage'>
-            <a>MyPage</a>
-          </Link>
-        </nav>
+        <h1>progLab closer</h1>
+        {user.id && (
+          <>
+            <nav>
+              <Link href='/'>
+                <a>HOME</a>
+              </Link>
+              <Link href='/weekly'>
+                <a>WEEKLY</a>
+              </Link>
+              <Link href='/games'>
+                <a>GAME村</a>
+              </Link>
+              <Link href='/mypage'>
+                <a>MYPAGE</a>
+              </Link>
+            </nav>
+            <button onClick={singOut}>ログアウト</button>
+          </>
+        )}
       </header>
-      <div>{children}</div>
+      <main>{children}</main>
     </StyledLayout>
   );
 };
 
 const StyledLayout = styled.div`
-  > header {
-    color: #fff;
-    background-color: aquamarine;
-
+  header {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-
-    > .site_logo {
-      padding: 8px 12px;
-      cursor: pointer;
-
-      img {
-        display: block;
-        width: 60px;
-      }
-      > h1 {
-        margin-left: 16px;
-        font-size: 26px;
-        font-weight: bold;
-      }
+    background-color: aquamarine;
+    padding: 12px 0;
+    h1 {
+      font-size: 24px;
+      margin: 0 32px;
     }
-
-    > nav {
-      margin-left: 16px;
+    nav {
+      display: flex;
       a {
-        padding: 12px;
+        padding: 4px;
         cursor: pointer;
-        text-decoration: underline;
       }
     }
+  }
+  main {
+    padding: 16px;
   }
 `;

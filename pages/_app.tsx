@@ -1,20 +1,14 @@
-import { AuthProvider } from '../src/context/Auth';
-import '../src/assets/reset.css';
-import '../src/assets/global.css';
+import '../src/assets/styles/reset.css';
+import '../src/assets/styles/global.css';
 import { RecoilRoot } from 'recoil';
-import { Layout } from '../src/components/Layout';
+import { Layout } from 'src/components/Layout';
+
 function MyApp({ Component, pageProps }) {
   return (
     <RecoilRoot>
-      <AuthProvider>
-        {process.browser && location.pathname === '/login' ? (
-          <Component {...pageProps} />
-        ) : (
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        )}
-      </AuthProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </RecoilRoot>
   );
 }

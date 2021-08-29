@@ -1,13 +1,11 @@
 import { VFC, useState, useEffect } from 'react';
-import { Content, ContentType } from 'src/types';
-import { ContentCard } from './ContentCard';
+import { Content } from 'src/types';
 
 type RouletteProps = {
-  close: () => void;
   content: Content[];
 };
 
-export const Roulette: VFC<RouletteProps> = ({ close, content }) => {
+export const Roulette: VFC<RouletteProps> = ({ content }) => {
   const [dice, setDice] = useState(0);
   const [count, setCount] = useState(0);
 
@@ -23,12 +21,7 @@ export const Roulette: VFC<RouletteProps> = ({ close, content }) => {
       if (count === 7 && nextDice % 2 === 1) return;
       setDice(nextDice);
     }, 300 + count * 60);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count]);
 
-  return (
-    <div>
-      <ContentCard content={content[dice]} />
-    </div>
-  );
+  return <div>{/* <ContentCard content={content[dice]} /> */}</div>;
 };

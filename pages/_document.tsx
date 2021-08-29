@@ -5,7 +5,6 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document';
-import { getAtomIds, getCssString } from '@fower/react';
 import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
@@ -38,12 +37,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <style
-            data-fower={getAtomIds()}
-            dangerouslySetInnerHTML={{ __html: getCssString() }}
-          />
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />
