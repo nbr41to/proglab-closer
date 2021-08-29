@@ -1,4 +1,5 @@
 import { VFC } from 'react';
+import { EditNameForm } from 'src/components/MyPage/EditNameForm';
 import { useAuthCheck } from 'src/recoil/authState/hook';
 import styled from 'styled-components';
 
@@ -11,6 +12,7 @@ const MyPage: VFC<MyPageProps> = ({ className }) => {
   return (
     <StyledMyPage className={`${className}`}>
       <h2>MyPage</h2>
+      <EditNameForm />
     </StyledMyPage>
   );
 };

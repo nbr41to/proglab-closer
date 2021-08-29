@@ -14,8 +14,8 @@ export const getUser = async (): Promise<User> => {
   }
 };
 
-export const updateUserName = (name: string) => {
+export const updateUserName = async (name: string) => {
   const authId = auth.currentUser?.uid;
   if (!authId) throw new Error('Not authenticated');
-  usersRef.doc(authId).update({ name });
+  await usersRef.doc(authId).update({ name });
 };
