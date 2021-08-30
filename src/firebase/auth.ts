@@ -29,3 +29,15 @@ export const singOut = async (): Promise<void> => {
     console.error(error);
   }
 };
+
+export const authenticatedCheck = async (): Promise<boolean> => {
+  try {
+    const user = auth.currentUser;
+    if (!user) return false;
+    const userDoc = await db.collection('users').doc(user.uid).get();
+    return !((userDoc.data() as User).role === 'unauthenticated');
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
+};

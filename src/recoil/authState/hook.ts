@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { auth } from 'src/firebase';
 import { authState } from './atom';
 import { useRouter } from 'next/router';
+import { authenticatedCheck } from 'src/firebase/auth';
 
 export const useAuthCheck = () => {
   const auth = useRecoilValue(authState);
@@ -11,6 +12,9 @@ export const useAuthCheck = () => {
   useEffect(() => {
     if (auth.loading) return;
     if (!auth.id) router.push('/login');
+    authenticatedCheck().then((res) => {
+      if (!res) router.push('/unauthenticated');
+    });
   }, [auth]);
   return auth;
 };
