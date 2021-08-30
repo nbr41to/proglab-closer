@@ -33,7 +33,7 @@ export const singOut = async (): Promise<void> => {
 export const authenticatedCheck = async (): Promise<boolean> => {
   try {
     const user = auth.currentUser;
-    if (!user) return false;
+    if (!user) return true; // fix
     const userDoc = await db.collection('users').doc(user.uid).get();
     return !((userDoc.data() as User).role === 'unauthenticated');
   } catch (error) {
