@@ -3,11 +3,11 @@ import { VFC } from 'react';
 import { googleSignIn } from 'src/firebase/auth';
 import styled from 'styled-components';
 
-type GameListPageProps = {
+type LoginPageProps = {
   className?: string;
 };
 
-const GameListPage: VFC<GameListPageProps> = ({ className }) => {
+const LoginPage: VFC<LoginPageProps> = ({ className }) => {
   const router = useRouter();
   const login = async () => {
     try {
@@ -18,13 +18,13 @@ const GameListPage: VFC<GameListPageProps> = ({ className }) => {
     }
   };
   return (
-    <StyledGameListPage className={`${className}`}>
+    <StyledLoginPage className={`${className}`}>
       <h2>ログインページ</h2>
       <button onClick={login}>Googleでログイン</button>
-    </StyledGameListPage>
+    </StyledLoginPage>
   );
 };
 
-const StyledGameListPage = styled.div``;
+const StyledLoginPage = styled.div``;
 
-export default GameListPage;
+export default LoginPage;

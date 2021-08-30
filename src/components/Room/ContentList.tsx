@@ -21,22 +21,15 @@ export const ContentList: VFC<ContentListProps> = ({ className, room }) => {
     );
     setResultRoulette(selectedContent);
     setSelectedContents([...selectedContents, selectedContent]);
-    return selectedContent;
   };
 
   return (
     <StyledContentList className={`${className}`}>
       <h3>今週の出来事</h3>
       <p>{resultRoulette?.text || '-'}</p>
-      <button onClick={() => console.log(startRoulette('doing'))}>
-        ルーレット1
-      </button>
-      <button onClick={() => console.log(startRoulette('learned'))}>
-        ルーレット2
-      </button>
-      <button onClick={() => console.log(startRoulette('willLearn'))}>
-        ルーレット3
-      </button>
+      <button onClick={() => startRoulette('doing')}>ルーレット1</button>
+      <button onClick={() => startRoulette('learned')}>ルーレット2</button>
+      <button onClick={() => startRoulette('willLearn')}>ルーレット3</button>
 
       {room?.contents
         ?.filter((content) => content.type === 'doing')

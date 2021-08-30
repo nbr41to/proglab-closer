@@ -31,6 +31,9 @@ export const Layout: VFC<LayoutProps> = ({ className, children }) => {
               <Link href='/mypage'>
                 <a>MYPAGE</a>
               </Link>
+              <Link href='/admin'>
+                <a>ADMIN</a>
+              </Link>
             </nav>
             <button onClick={singOut}>ログアウト</button>
           </>

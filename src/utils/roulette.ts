@@ -7,7 +7,6 @@ export const roulette = (contents: Content[]) => {
       members.push(content.name);
     }
   });
-  console.log(members);
   const diceMember = Math.floor(Math.random() * members.length);
   const chooseContents = contents.filter(
     (content) => content.name === members[diceMember]

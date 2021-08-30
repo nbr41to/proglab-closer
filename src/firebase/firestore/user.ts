@@ -19,3 +19,18 @@ export const updateUserName = async (name: string) => {
   if (!authId) throw new Error('Not authenticated');
   await usersRef.doc(authId).update({ name });
 };
+
+export const authenticateUser = async (userId: string) => {
+  await usersRef.doc(userId).update({
+    role: 'closer',
+  });
+};
+
+export const getUnauthenticatedUser = async (): Promise<User[]> => {
+  try {
+    const users = await usersRef.where('role', '==', 'unauthenticated').get();
+    return users.docs.map((doc) => doc.data() as User);
+  } catch (error) {
+    console.error('getUnauthenticatedUser', error);
+  }
+};
