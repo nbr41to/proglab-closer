@@ -6,11 +6,20 @@ export default function Home() {
   return (
     <StyledHome>
       <h2>HOME</h2>
-      <a href='https://nobco.notion.site/progLab-Closers-aae9fc9944954d27880d322e167d5215'>
+      <a
+        href='https://nobco.notion.site/progLab-Closers-aae9fc9944954d27880d322e167d5215'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
         会員用情報掲載ページ
       </a>
     </StyledHome>
   );
 }
 
-const StyledHome = styled.div``;
+const StyledHome = styled.div`
+  a {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+`;

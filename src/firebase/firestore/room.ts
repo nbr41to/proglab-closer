@@ -44,7 +44,7 @@ export const postReport = async (input: {
 
 export const getRooms = async () => {
   try {
-    if (!auth.currentUser) throw new Error('User not logged in');
+    if (!auth.currentUser) return [];
     const snapshot = await roomsRef.get();
     const rooms = snapshot.docs.map((doc) => doc.data() as Room);
     return rooms;

@@ -11,14 +11,13 @@ type WeeklyPageProps = {
 };
 
 const WeeklyPage: VFC<WeeklyPageProps> = ({ className }) => {
-  useAuthCheck();
+  const auth = useAuthCheck();
   const [rooms, setRooms] = useState<Room[]>([]);
 
   useEffect(() => {
     getRooms().then((res) => setRooms(res));
-  }, []);
+  }, [auth]);
 
-  console.log(rooms);
   return (
     <StyledWeeklyPage className={`${className}`}>
       <h2>【日曜定例】今週どうでしょう</h2>

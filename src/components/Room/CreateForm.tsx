@@ -18,8 +18,6 @@ export const CreateForm: VFC<CreateFormProps> = ({ className }) => {
     setInput('');
   };
 
-  console.log(user);
-
   if (user.state === 'hasValue' && user.contents?.role === 'admin') {
     return (
       <StyledCreateForm className={`${className}`}>

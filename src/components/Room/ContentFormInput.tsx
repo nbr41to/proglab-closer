@@ -1,4 +1,4 @@
-import { useState, VFC } from 'react';
+import { useState, VFC, FormEvent } from 'react';
 import styled from 'styled-components';
 import { ContentType } from 'src/types';
 import { postReport } from 'src/firebase/firestore/room';
@@ -18,7 +18,8 @@ export const ContentFormInput: VFC<ContentFormInputProps> = ({
 }) => {
   const user = useRecoilValueLoadable(withAuthInfo);
   const [text, setText] = useState('');
-  const submit = async () => {
+  const submit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     if (!text) return;
     if (user.state !== 'hasValue') return;
     await postReport({
@@ -28,15 +29,18 @@ export const ContentFormInput: VFC<ContentFormInputProps> = ({
     setText('');
   };
   return (
-    <StyledContentFormInput className={`${className}`}>
+    <StyledContentFormInput
+      className={`${className}`}
+      onSubmit={(e) => submit(e)}
+    >
       <input
         type='text'
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button onClick={submit}>送信</button>
+      <button type='submit'>送信</button>
     </StyledContentFormInput>
   );
 };
 
-const StyledContentFormInput = styled.div``;
+const StyledContentFormInput = styled.form``;
