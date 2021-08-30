@@ -25,7 +25,7 @@ const AdminPage: VFC<AdminPageProps> = ({ className }) => {
         <h2>Admin Page</h2>
         <p>認証待ちリスト</p>
         {userList.map((user) => (
-          <AuthenticateButton user={user} />
+          <AuthenticateButton key={user?.id} user={user} />
         ))}
       </StyledAdminPage>
     );
