@@ -10,5 +10,11 @@ export const createGame = async (input: Game) => {
     ...input,
     id: gameDoc.id,
     createdAt: dateFormatted(),
+    reviews: [],
   } as Game);
+};
+export const getGameList = async () => {
+  const snapshot = await gamesRef.get();
+  const gameList = snapshot.docs.map((doc) => doc.data() as Game);
+  return gameList;
 };
