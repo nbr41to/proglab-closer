@@ -26,6 +26,15 @@ export type Room = {
   achieved?: boolean;
 };
 
+export type GameReview = {
+  id?: string;
+  score: number;
+  title: string;
+  review: string;
+  reviewedBy: string;
+  createdAt: string;
+};
+
 export type Game = {
   id?: string;
   title: string;
@@ -35,4 +44,5 @@ export type Game = {
   gameUrl: string;
   githubUrl: string;
   createdAt?: string;
+  reviews: GameReview[];
 };
