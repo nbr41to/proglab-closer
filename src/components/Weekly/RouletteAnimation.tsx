@@ -91,8 +91,8 @@ export const RouletteAnimation: VFC<RouletteAnimationProps> = ({
 const StyledRouletteAnimation = styled.div`
   .start_button {
     position: absolute;
-    top: 290px;
-    left: 265px;
+    top: 390px;
+    left: 370px;
   }
   #circle {
     width: 1500px;
