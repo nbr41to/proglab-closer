@@ -6,7 +6,14 @@ module.exports = {
     'stylelint-prettier/recommended',
     'stylelint-config-prettier',
   ],
-  ignoreFiles: ['node_modules/**', '**.json', '**.md', '**.ico'],
+  ignoreFiles: [
+    'node_modules/**',
+    'public/**',
+    'src/assets/images/**',
+    '**.json',
+    '**.md',
+    '**.ico',
+  ],
   rules: {
     'block-no-empty': null,
     'no-empty-source': null,

@@ -4,4 +4,6 @@ package.json
 .prettierrc.js
 next.config.js
 .next
+public/
 out/
+src/assets/
