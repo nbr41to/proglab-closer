@@ -1,5 +1,6 @@
 import { Game } from 'src/types';
 import { dateFormatted } from 'src/utils/dateFormatted';
+
 import { db } from '..';
 
 const gamesRef = db.collection('games');

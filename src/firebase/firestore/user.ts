@@ -1,5 +1,6 @@
 import { User } from 'src/types';
-import { db, auth } from '../';
+
+import { auth, db } from '../';
 
 const usersRef = db.collection('users');
 

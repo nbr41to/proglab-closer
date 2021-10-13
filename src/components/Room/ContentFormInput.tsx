@@ -1,8 +1,9 @@
-import { useState, VFC, FormEvent } from 'react';
-import styled from 'styled-components';
-import { ContentType } from 'src/types';
-import { postReport } from 'src/firebase/firestore/room';
+import { FormEvent, useState, VFC } from 'react';
 import { useRecoilValueLoadable } from 'recoil';
+import { postReport } from 'src/firebase/firestore/room';
+import { ContentType } from 'src/types';
+import styled from 'styled-components';
+
 import { withAuthInfo } from '../../recoil/authState/selector';
 
 type ContentFormInputProps = {
@@ -34,11 +35,11 @@ export const ContentFormInput: VFC<ContentFormInputProps> = ({
       onSubmit={(e) => submit(e)}
     >
       <input
-        type='text'
+        type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button type='submit'>送信</button>
+      <button type="submit">送信</button>
     </StyledContentFormInput>
   );
 };

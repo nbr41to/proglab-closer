@@ -1,5 +1,6 @@
 import { User } from 'src/types';
-import { auth, firebase, db } from '.';
+
+import { auth, db, firebase } from '.';
 
 export const googleSignIn = async (): Promise<string> => {
   try {

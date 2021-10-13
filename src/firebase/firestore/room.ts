@@ -1,8 +1,9 @@
-import { Room, ContentType } from 'src/types';
-import { db, firebase } from '..';
-import { dateFormatted } from '../../utils/dateFormatted';
-import { Content } from '../../types';
 import { auth } from 'src/firebase';
+import { ContentType, Room } from 'src/types';
+
+import { Content } from '../../types';
+import { dateFormatted } from '../../utils/dateFormatted';
+import { db, firebase } from '..';
 
 const roomsRef = db.collection('rooms');
 

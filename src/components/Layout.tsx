@@ -1,8 +1,8 @@
-import { VFC, ReactNode } from 'react';
-import styled from 'styled-components';
 import Link from 'next/link';
-import { useListenAuth } from 'src/recoil/authState';
+import { ReactNode, VFC } from 'react';
 import { singOut } from 'src/firebase/auth';
+import { useListenAuth } from 'src/recoil/authState';
+import styled from 'styled-components';
 
 type LayoutProps = {
   className?: string;
@@ -19,19 +19,19 @@ export const Layout: VFC<LayoutProps> = ({ className, children }) => {
         {user.id && (
           <>
             <nav>
-              <Link href='/'>
+              <Link href="/">
                 <a>HOME</a>
               </Link>
-              <Link href='/weekly'>
+              <Link href="/weekly">
                 <a>WEEKLY</a>
               </Link>
-              <Link href='/games'>
+              <Link href="/games">
                 <a>GAME村</a>
               </Link>
-              <Link href='/mypage'>
+              <Link href="/mypage">
                 <a>MYPAGE</a>
               </Link>
-              <Link href='/admin'>
+              <Link href="/admin">
                 <a>ADMIN</a>
               </Link>
             </nav>
@@ -48,20 +48,24 @@ const StyledLayout = styled.div`
   header {
     display: flex;
     align-items: center;
-    background-color: aquamarine;
     padding: 12px 0;
+    background-color: aquamarine;
+
     h1 {
-      font-size: 24px;
       margin: 0 32px;
+      font-size: 24px;
     }
+
     nav {
       display: flex;
+
       a {
         padding: 4px;
         cursor: pointer;
       }
     }
   }
+
   main {
     padding: 16px;
   }

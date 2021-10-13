@@ -1,4 +1,4 @@
-import { VFC, useEffect, useState } from 'react';
+import { useEffect, useState, VFC } from 'react';
 import { getGameList } from 'src/firebase/firestore/game';
 import { Game } from 'src/types';
 import styled from 'styled-components';
@@ -36,16 +36,18 @@ export const Gallery: VFC<GalleryProps> = ({ className }) => {
 
 const StyledGallery = styled.div`
   .gallery_item {
+    padding: 12px 20px;
+    margin: 12px;
     border: 1px solid #444;
     border-radius: 8px;
-    margin: 12px;
-    padding: 12px 20px;
+
     h3 {
+      padding-bottom: 4px;
+      margin-bottom: 8px;
       font-size: 20px;
       border-bottom: 1px solid #444;
-      margin-bottom: 8px;
-      padding-bottom: 4px;
     }
+
     a {
       text-decoration: underline;
       cursor: pointer;

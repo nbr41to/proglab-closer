@@ -1,5 +1,6 @@
 import { selector } from 'recoil';
 import { getUser } from 'src/firebase/firestore/user';
+
 import { authState } from './atom';
 
 export const withAuthInfo = selector({

@@ -1,13 +1,14 @@
-import { VFC, useEffect, useState } from 'react';
-import { db } from 'src/firebase';
 import { useRouter } from 'next/router';
-import { Room } from 'src/types';
+import { useEffect, useState, VFC } from 'react';
+import { useRecoilValueLoadable } from 'recoil';
 import { ContentForm } from 'src/components/Room/ContentForm';
 import { ContentList } from 'src/components/Room/ContentList';
-import { useRecoilValueLoadable } from 'recoil';
-import { withAuthInfo } from '../../src/recoil/authState';
+import { db } from 'src/firebase';
 import { achievedRoom } from 'src/firebase/firestore/room';
 import { useAuthCheck } from 'src/recoil/authState/hook';
+import { Room } from 'src/types';
+
+import { withAuthInfo } from '../../src/recoil/authState';
 
 const RoomPage: VFC = () => {
   useAuthCheck();

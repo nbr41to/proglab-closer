@@ -4,6 +4,7 @@ import { useRecoilValueLoadable } from 'recoil';
 import { withAuthInfo } from 'src/recoil/authState';
 import { Game } from 'src/types';
 import styled from 'styled-components';
+
 import { createGame } from '../../firebase/firestore/game';
 
 type PostFormProps = {
@@ -29,36 +30,36 @@ export const PostForm: VFC<PostFormProps> = ({ className }) => {
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={window.URL.createObjectURL(watch('thumbnail')[0])}
-            alt='preview'
+            alt="preview"
           />
         )}
-        <input type='file' accept='image/*' {...register('thumbnail')} />
+        <input type="file" accept="image/*" {...register('thumbnail')} />
         <input
-          type='text'
+          type="text"
           {...register('title', { required: true })}
-          placeholder='タイトル'
+          placeholder="タイトル"
         />
         <textarea
           rows={4}
           {...register('description', { required: true })}
-          placeholder='説明'
+          placeholder="説明"
         ></textarea>
         <input
-          type='text'
+          type="text"
           {...register('createdBy', { required: true })}
-          placeholder='製作者'
+          placeholder="製作者"
         />
         <input
-          type='url'
+          type="url"
           {...register('gameUrl', { required: true })}
-          placeholder='ゲームのURL'
+          placeholder="ゲームのURL"
         />
         <input
-          type='url'
+          type="url"
           {...register('githubUrl', { required: true })}
-          placeholder='GitHubのURL'
+          placeholder="GitHubのURL"
         />
-        <button type='submit'>送信</button>
+        <button type="submit">送信</button>
       </form>
     </StyledPostForm>
   );
@@ -66,12 +67,15 @@ export const PostForm: VFC<PostFormProps> = ({ className }) => {
 
 const StyledPostForm = styled.div`
   width: min-content;
+
   form {
     display: flex;
     flex-direction: column;
+
     img {
       width: 400px;
     }
+
     button {
       text-align: center;
     }
