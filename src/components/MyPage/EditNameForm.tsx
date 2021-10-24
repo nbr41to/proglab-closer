@@ -1,8 +1,9 @@
-import { useState, VFC, useEffect } from 'react';
-import styled from 'styled-components';
+import { useEffect, useState, VFC } from 'react';
 import { useRecoilValueLoadable } from 'recoil';
-import { withAuthInfo } from '../../recoil/authState/selector';
 import { updateUserName } from 'src/firebase/firestore/user';
+import styled from 'styled-components';
+
+import { withAuthInfo } from '../../recoil/authState/selector';
 
 type EditNameFormProps = {
   className?: string;
@@ -24,7 +25,7 @@ export const EditNameForm: VFC<EditNameFormProps> = ({ className }) => {
   return (
     <StyledEditNameForm className={`${className}`}>
       <input
-        type='text'
+        type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />

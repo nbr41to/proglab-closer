@@ -1,9 +1,10 @@
-import { useRecoilState, useRecoilValue } from 'recoil';
-import { useEffect } from 'react';
-import { auth } from 'src/firebase';
-import { authState } from './atom';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { auth } from 'src/firebase';
 import { authenticatedCheck } from 'src/firebase/auth';
+
+import { authState } from './atom';
 
 export const useAuthCheck = () => {
   const auth = useRecoilValue(authState);

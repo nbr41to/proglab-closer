@@ -1,10 +1,11 @@
-import { VFC, useEffect, useState } from 'react';
+import { useEffect, useState, VFC } from 'react';
 import { useRecoilValueLoadable } from 'recoil';
 import { AuthenticateButton } from 'src/components/Admin/AuthenticateButton';
 import { withAuthInfo } from 'src/recoil/authState';
 import { useAuthCheck } from 'src/recoil/authState/hook';
 import { User } from 'src/types';
 import styled from 'styled-components';
+
 import { getUnauthenticatedUser } from '../src/firebase/firestore/user';
 
 type AdminPageProps = {

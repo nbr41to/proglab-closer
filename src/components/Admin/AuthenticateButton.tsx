@@ -1,7 +1,7 @@
 import { VFC } from 'react';
-import styled from 'styled-components';
-import { User } from 'src/types';
 import { authenticateUser } from 'src/firebase/firestore/user';
+import { User } from 'src/types';
+import styled from 'styled-components';
 
 type AuthenticateButtonProps = {
   className?: string;

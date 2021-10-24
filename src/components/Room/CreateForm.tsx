@@ -1,8 +1,9 @@
 import { useState, VFC } from 'react';
 import { useRecoilValueLoadable } from 'recoil';
-import styled from 'styled-components';
-import { withAuthInfo } from '../../recoil/authState';
 import { createRoom } from 'src/firebase/firestore/room';
+import styled from 'styled-components';
+
+import { withAuthInfo } from '../../recoil/authState';
 
 type CreateFormProps = {
   className?: string;
@@ -22,7 +23,7 @@ export const CreateForm: VFC<CreateFormProps> = ({ className }) => {
     return (
       <StyledCreateForm className={`${className}`}>
         <input
-          type='text'
+          type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />

@@ -1,8 +1,8 @@
 import router from 'next/router';
+import { useRouter } from 'next/router';
 import { VFC } from 'react';
 import { Room } from 'src/types';
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
 
 type ListItemProps = {
   className?: string;
@@ -22,8 +22,8 @@ export const ListItem: VFC<ListItemProps> = ({ className, room }) => {
 
 const StyledListItem = styled.div`
   p {
-    cursor: pointer;
     padding: 8px;
+    cursor: pointer;
     border-bottom: 1px solid #444;
   }
 `;

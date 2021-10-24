@@ -1,8 +1,8 @@
 import { useState, VFC } from 'react';
-import { Room, ContentType } from 'src/types';
-import styled from 'styled-components';
-import { roulette } from 'src/utils/roulette';
+import { ContentType, Room } from 'src/types';
 import { Content } from 'src/types';
+import { roulette } from 'src/utils/roulette';
+import styled from 'styled-components';
 
 type ContentListProps = {
   className?: string;
@@ -17,7 +17,7 @@ export const ContentList: VFC<ContentListProps> = ({ className, room }) => {
     const selectedContent = roulette(
       room.contents
         .filter((content) => content.type === type)
-        .filter((content) => !selectedContents.includes(content))
+        .filter((content) => !selectedContents.includes(content)),
     );
     setResultRoulette(selectedContent);
     setSelectedContents([...selectedContents, selectedContent]);

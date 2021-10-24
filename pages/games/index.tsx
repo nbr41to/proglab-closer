@@ -1,8 +1,8 @@
 import { VFC } from 'react';
+import { Gallery } from 'src/components/Game/Gallery';
+import { PostForm } from 'src/components/Game/PostForm';
 import { useAuthCheck } from 'src/recoil/authState/hook';
 import styled from 'styled-components';
-import { PostForm } from 'src/components/Game/PostForm';
-import { Gallery } from 'src/components/Game/Gallery';
 
 type GameListPageProps = {
   className?: string;
