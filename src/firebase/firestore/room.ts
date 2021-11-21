@@ -1,5 +1,6 @@
+import { nanoid } from 'nanoid';
 import { auth } from 'src/firebase';
-import { ContentType, Room } from 'src/types';
+import { Room } from 'src/types';
 
 import { Content } from '../../types';
 import { dateFormatted } from '../../utils/dateFormatted';
@@ -38,8 +39,18 @@ export const postReport = async (input: {
   content: Content;
 }) => {
   const { roomId, content } = input;
+  content.id = nanoid();
   await roomsRef.doc(roomId).update({
     contents: firebase.firestore.FieldValue.arrayUnion(content),
+  });
+};
+export const removeReport = async (input: {
+  roomId: string;
+  content: Content;
+}) => {
+  const { roomId, content } = input;
+  await roomsRef.doc(roomId).update({
+    contents: firebase.firestore.FieldValue.arrayRemove(content),
   });
 };
 

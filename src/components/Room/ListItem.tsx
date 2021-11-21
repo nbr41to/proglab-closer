@@ -24,6 +24,11 @@ const StyledListItem = styled.div`
   p {
     padding: 8px;
     cursor: pointer;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #ccc;
+
+    &:hover {
+      background-color: #ccc;
+      transition: background-color 0.2s ease-in-out;
+    }
   }
 `;
