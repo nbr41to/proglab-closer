@@ -11,7 +11,9 @@ export type User = {
 export type ContentType = 'doing' | 'learned' | 'willLearn';
 
 export type Content = {
+  id?: string;
   type?: ContentType;
+  userId?: string;
   name?: string;
   text: string;
   colorNum?: number;

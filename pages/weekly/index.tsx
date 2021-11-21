@@ -22,15 +22,20 @@ const WeeklyPage: VFC<WeeklyPageProps> = ({ className }) => {
     <StyledWeeklyPage className={`${className}`}>
       <h2>【日曜定例】今週どうでしょう</h2>
       <CreateForm />
-      <p>公開中のお部屋</p>
+      <h3>◆公開中のお部屋</h3>
       {rooms
         ?.filter((room) => !room.achieved)
         .map((room) => (
           <ListItem key={room.id} room={room} />
         ))}
-      <p>これまでのお部屋</p>
+      <h3>◆これまでのお部屋</h3>
       {rooms
         ?.filter((room) => room.achieved)
+        .sort((a, b) => {
+          if (b.date < a.date) return -1;
+          if (b.date > a.date) return 1;
+          return 0;
+        })
         .map((room) => (
           <ListItem key={room.id} room={room} />
         ))}
@@ -38,6 +43,11 @@ const WeeklyPage: VFC<WeeklyPageProps> = ({ className }) => {
   );
 };
 
-const StyledWeeklyPage = styled.div``;
+const StyledWeeklyPage = styled.div`
+  h3 {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+`;
 
 export default WeeklyPage;

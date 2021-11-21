@@ -67,6 +67,6 @@ const StyledLayout = styled.div`
   }
 
   main {
-    padding: 16px;
+    padding: 16px 32px;
   }
 `;

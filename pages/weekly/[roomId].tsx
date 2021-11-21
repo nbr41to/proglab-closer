@@ -7,6 +7,7 @@ import { db } from 'src/firebase';
 import { achievedRoom } from 'src/firebase/firestore/room';
 import { useAuthCheck } from 'src/recoil/authState/hook';
 import { Room } from 'src/types';
+import styled from 'styled-components';
 
 import { withAuthInfo } from '../../src/recoil/authState';
 
@@ -27,11 +28,9 @@ const RoomPage: VFC = () => {
   }, [router]);
 
   return (
-    <div>
+    <StyledRoomPage>
       <h2>
-        {room?.title} の
-        <br />
-        今週どうでしょう
+        <span>🎉 {room?.title} の 今週どうでしょう 🎊</span>
       </h2>
       {!room?.achieved && <ContentForm roomId={roomId} />}
       <ContentList room={room} />
@@ -40,8 +39,22 @@ const RoomPage: VFC = () => {
           Achieve
         </button>
       )}
-    </div>
+    </StyledRoomPage>
   );
 };
+const StyledRoomPage = styled.div`
+  > h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+
+    > span {
+      color: #ff8c00;
+      background: -webkit-linear-gradient(0deg, #40e0d0, #ff8c00, #ff0080);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+`;
 
 export default RoomPage;
