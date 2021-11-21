@@ -1,3 +1,5 @@
+const { error } = require('console');
+
 module.exports = {
   root: true,
   env: {
@@ -33,5 +35,6 @@ module.exports = {
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
+    '@typescript-eslint/no-unused-vars': 'error',
   },
 };

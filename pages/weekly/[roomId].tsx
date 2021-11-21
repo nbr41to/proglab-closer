@@ -30,7 +30,7 @@ const RoomPage: VFC = () => {
   return (
     <StyledRoomPage>
       <h2>
-        <span>🎉 {room?.title} の 今週どうでしょう 🎊</span>
+        <span>🎉 {room?.title} の 今週どうでしょう会 🎊</span>
       </h2>
       {!room?.achieved && <ContentForm roomId={roomId} />}
       <ContentList room={room} />
