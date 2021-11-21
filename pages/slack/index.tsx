@@ -1,6 +1,4 @@
 import { VFC } from 'react';
-import { Gallery } from 'src/components/Game/Gallery';
-import { PostForm } from 'src/components/Game/PostForm';
 import { useAuthCheck } from 'src/recoil/authState/hook';
 import styled from 'styled-components';
 
