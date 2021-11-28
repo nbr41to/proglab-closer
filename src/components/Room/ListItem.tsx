@@ -1,4 +1,3 @@
-import router from 'next/router';
 import { useRouter } from 'next/router';
 import { VFC } from 'react';
 import { Room } from 'src/types';
@@ -24,6 +23,11 @@ const StyledListItem = styled.div`
   p {
     padding: 8px;
     cursor: pointer;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #ccc;
+
+    &:hover {
+      background-color: #ccc;
+      transition: background-color 0.2s ease-in-out;
+    }
   }
 `;

@@ -19,12 +19,18 @@ export const ContentFormInput: VFC<ContentFormInputProps> = ({
 }) => {
   const user = useRecoilValueLoadable(withAuthInfo);
   const [text, setText] = useState('');
+
   const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!text) return;
     if (user.state !== 'hasValue') return;
     await postReport({
-      content: { type, text, name: user.contents.name },
+      content: {
+        type,
+        text,
+        userId: user.contents.id,
+        name: user.contents.name,
+      },
       roomId,
     });
     setText('');
@@ -44,4 +50,9 @@ export const ContentFormInput: VFC<ContentFormInputProps> = ({
   );
 };
 
-const StyledContentFormInput = styled.form``;
+const StyledContentFormInput = styled.form`
+  > input {
+    text-align: left;
+    background-color: #fff;
+  }
+`;
