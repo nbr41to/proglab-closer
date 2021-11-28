@@ -1,10 +1,11 @@
 import { useEffect, useState, VFC } from 'react';
-import { CreateForm } from 'src/components/Room/CreateForm';
-import { ListItem } from 'src/components/Room/ListItem';
 import { getRooms } from 'src/firebase/firestore/room';
 import { useAuthCheck } from 'src/recoil/authState/hook';
 import { Room } from 'src/types';
 import styled from 'styled-components';
+
+import { CreateForm } from '@/components/Weekly/CreateForm';
+import { ListItem } from '@/components/Weekly/ListItem';
 
 type WeeklyPageProps = {
   className?: string;
