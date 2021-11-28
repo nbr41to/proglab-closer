@@ -14,17 +14,17 @@ type ContentListProps = {
 
 export const ContentList: VFC<ContentListProps> = ({ className, room }) => {
   const user = useRecoilValueLoadable(withAuthInfo);
-  const [selectedContents, setSelectedContents] = useState<Content[]>([]);
+  const [selectedContents, setSelectedContents] = useState<string[]>([]);
   const [resultRoulette, setResultRoulette] = useState<Content>(null);
 
   const startRoulette = (type: ContentType) => {
     const selectedContent = roulette(
       room.contents
         .filter((content) => content.type === type)
-        .filter((content) => !selectedContents.includes(content)),
+        .filter((content) => !selectedContents.includes(content.id)),
     );
     setResultRoulette(selectedContent);
-    setSelectedContents([...selectedContents, selectedContent]);
+    setSelectedContents([...selectedContents, selectedContent.id]);
   };
 
   const myUserId = useMemo(
@@ -67,7 +67,7 @@ export const ContentList: VFC<ContentListProps> = ({ className, room }) => {
             <div
               key={`${content.text}_${content.name}`}
               className={`theme_card ${
-                selectedContents.includes(content) ? 'selected' : ''
+                selectedContents.includes(content.id) ? 'selected' : ''
               }`}
             >
               {content.text}
@@ -90,7 +90,7 @@ export const ContentList: VFC<ContentListProps> = ({ className, room }) => {
             <div
               key={`${content.text}_${content.name}`}
               className={`theme_card ${
-                selectedContents.includes(content) ? 'selected' : ''
+                selectedContents.includes(content.id) ? 'selected' : ''
               }`}
             >
               {content.text}
@@ -113,7 +113,7 @@ export const ContentList: VFC<ContentListProps> = ({ className, room }) => {
             <div
               key={`${content.text}_${content.name}`}
               className={`theme_card ${
-                selectedContents.includes(content) ? 'selected' : ''
+                selectedContents.includes(content.id) ? 'selected' : ''
               }`}
             >
               {content.text}
@@ -178,21 +178,28 @@ const StyledContentList = styled.div`
       position: relative;
 
       > .delete_button {
-        position: absolute;
-        top: -4px;
-        right: -4px;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 24px;
-        height: 24px;
-        padding: 0;
-        margin: 0;
-        font-size: 16px;
-        color: #444;
-        border-color: #444;
-        border-radius: 50%;
+        display: none;
+      }
+
+      &:hover {
+        > .delete_button {
+          position: absolute;
+          top: -4px;
+          right: -4px;
+          box-sizing: border-box;
+          display: block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          padding: 0;
+          margin: 0;
+          font-size: 16px;
+          color: #444;
+          border-color: #444;
+          border-radius: 50%;
+        }
       }
     }
 

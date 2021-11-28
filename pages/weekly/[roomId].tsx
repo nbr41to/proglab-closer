@@ -1,13 +1,14 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState, VFC } from 'react';
 import { useRecoilValueLoadable } from 'recoil';
-import { ContentForm } from 'src/components/Room/ContentForm';
-import { ContentList } from 'src/components/Room/ContentList';
 import { db } from 'src/firebase';
 import { achievedRoom } from 'src/firebase/firestore/room';
 import { useAuthCheck } from 'src/recoil/authState/hook';
 import { Room } from 'src/types';
 import styled from 'styled-components';
+
+import { ContentForm } from '@/components/Weekly/Room/ContentForm';
+import { ContentList } from '@/components/Weekly/Room/ContentList';
 
 import { withAuthInfo } from '../../src/recoil/authState';
 

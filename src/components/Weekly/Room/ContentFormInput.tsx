@@ -4,7 +4,7 @@ import { postReport } from 'src/firebase/firestore/room';
 import { ContentType } from 'src/types';
 import styled from 'styled-components';
 
-import { withAuthInfo } from '../../recoil/authState/selector';
+import { withAuthInfo } from '../../../recoil/authState/selector';
 
 type ContentFormInputProps = {
   className?: string;
