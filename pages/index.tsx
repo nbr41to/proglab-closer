@@ -1,25 +1,12 @@
 import { useAuthCheck } from 'src/recoil/authState/hook';
-import styled from 'styled-components';
+
+import { HomePage } from '@/components/Home';
 
 export default function Home() {
   useAuthCheck();
   return (
-    <StyledHome>
-      <h2>HOME</h2>
-      <a
-        href="https://nobco.notion.site/progLab-Closers-aae9fc9944954d27880d322e167d5215"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        会員用情報掲載ページ
-      </a>
-    </StyledHome>
+    <>
+      <HomePage />
+    </>
   );
 }
-
-const StyledHome = styled.div`
-  a {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-`;

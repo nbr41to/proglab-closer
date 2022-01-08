@@ -12,6 +12,7 @@
 - 見た目をいい感じに
 - ルーレット機能
 - 活動記録機能
+- styling を styled-components から tailwind へ移行
 
 ## DONE
 

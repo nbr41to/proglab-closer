@@ -4,19 +4,6 @@ body {
   margin: 0;
 }
 
-input,
-textarea {
-  padding: 4px 8px;
-  margin: 4px;
-  border: 1px solid #444;
-  border-radius: 4px;
-}
-
-button {
-  padding: 4px 8px;
-  margin: 4px;
-  cursor: pointer;
-  background-color: #eee;
-  border: 1px solid #444;
-  border-radius: 4px;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

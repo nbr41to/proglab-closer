@@ -1,22 +1,23 @@
 import { VFC } from 'react';
 import { EditNameForm } from 'src/components/MyPage/EditNameForm';
 import { useAuthCheck } from 'src/recoil/authState/hook';
-import styled from 'styled-components';
 
 type MyPageProps = {
   className?: string;
 };
 
-const MyPage: VFC<MyPageProps> = ({ className }) => {
+const MyPage: VFC<MyPageProps> = () => {
   useAuthCheck();
   return (
-    <StyledMyPage className={`${className}`}>
-      <h2>MyPage</h2>
+    <div>
+      <h1>MyPage</h1>
+      <h2>ユーザ設定</h2>
       <EditNameForm />
-    </StyledMyPage>
+      <h2>カスタマイズ</h2>
+      <p>Slackの絵文字スタンプの編集昨日</p>
+      <h2>お支払い状況</h2>
+    </div>
   );
 };
-
-const StyledMyPage = styled.div``;
 
 export default MyPage;
