@@ -23,7 +23,6 @@ const StyledListItem = styled.div`
   p {
     padding: 8px;
     cursor: pointer;
-    border-bottom: 1px solid #ccc;
 
     &:hover {
       background-color: #ccc;

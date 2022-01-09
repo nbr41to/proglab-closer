@@ -23,9 +23,9 @@ export const WeeklyPage: VFC = () => {
         paragraph="【日曜20時定例】今週どうでしょう会の会場です"
       />
       <CreateForm />
-      <h3>◆公開中のお部屋</h3>
+      <h3 className="text-center">◆公開中のお部屋</h3>
       {rooms?.filter((room) => !room.achieved).length ? (
-        <Board className="p-4">
+        <Board className="p-4 divide-y divide-gray-300">
           {rooms
             ?.filter((room) => !room.achieved)
             .map((room) => (
@@ -35,8 +35,8 @@ export const WeeklyPage: VFC = () => {
       ) : (
         <p>公開中のお部屋はありません</p>
       )}
-      <h3>◆これまでのお部屋</h3>
-      <Board className="p-4">
+      <h3 className="text-center">◆これまでのお部屋</h3>
+      <Board className="p-4 divide-y divide-gray-300">
         {rooms
           ?.filter((room) => room.achieved)
           .sort((a, b) => {
