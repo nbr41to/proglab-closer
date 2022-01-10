@@ -20,7 +20,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['simple-import-sort', '@typescript-eslint'],
+  plugins: ['simple-import-sort', '@typescript-eslint', 'tailwindcss'],
   extends: [
     'next',
     'next/core-web-vitals',
@@ -28,6 +28,7 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:tailwindcss/recommended',
     'prettier',
   ],
   rules: {

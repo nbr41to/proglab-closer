@@ -1,22 +1,16 @@
-import { VFC } from 'react';
-import { EditNameForm } from 'src/components/MyPage/EditNameForm';
+import { NextPage } from 'next';
 import { useAuthCheck } from 'src/recoil/authState/hook';
-import styled from 'styled-components';
 
-type MyPageProps = {
-  className?: string;
-};
+import { UserSettingPage } from '@/components/MyPage';
 
-const MyPage: VFC<MyPageProps> = ({ className }) => {
+const MyPage: NextPage = () => {
   useAuthCheck();
+
   return (
-    <StyledMyPage className={`${className}`}>
-      <h2>MyPage</h2>
-      <EditNameForm />
-    </StyledMyPage>
+    <>
+      <UserSettingPage />
+    </>
   );
 };
-
-const StyledMyPage = styled.div``;
 
 export default MyPage;

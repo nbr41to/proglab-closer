@@ -3,7 +3,8 @@ import '../src/assets/styles/global.css';
 
 import Head from 'next/head';
 import { RecoilRoot } from 'recoil';
-import { Layout } from 'src/components/Layout';
+
+import { Layout } from '@/components/Layout';
 
 function MyApp({ Component, pageProps }) {
   return (

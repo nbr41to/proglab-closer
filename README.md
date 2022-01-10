@@ -12,6 +12,10 @@
 - 見た目をいい感じに
 - ルーレット機能
 - 活動記録機能
+- styling を styled-components から tailwind へ移行
+- Stripe による決済機能
+- Slack のスタンプ一覧の取得と編集/削除
+- キャンペーンの申請
 
 ## DONE
 

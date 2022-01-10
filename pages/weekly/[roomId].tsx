@@ -1,3 +1,4 @@
+import { doc, onSnapshot } from 'firebase/firestore';
 import { useRouter } from 'next/router';
 import { useEffect, useState, VFC } from 'react';
 import { useRecoilValueLoadable } from 'recoil';
@@ -20,13 +21,14 @@ const RoomPage: VFC = () => {
   const [room, setRoom] = useState<Room>(null);
 
   useEffect(() => {
-    db.collection('rooms')
-      .doc(roomId)
-      .onSnapshot((doc) => {
-        if (!doc) return;
-        setRoom(doc.data() as Room);
-      });
-  }, [router]);
+    const unsubscribe = onSnapshot(doc(db, 'rooms', roomId), (doc) => {
+      if (!doc) return;
+      setRoom(doc.data() as Room);
+    });
+    return () => {
+      unsubscribe();
+    };
+  }, [router, roomId]);
 
   return (
     <StyledRoomPage>
